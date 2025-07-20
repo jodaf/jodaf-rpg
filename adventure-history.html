@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Adventure History</title>
+  <style>
+     body {
+       background-color: Wheat;
+     }
+     table {
+       background-color: LightGray;
+     }
+     td, th {
+       background-color: Wheat;
+       border-style: None Ridge None Ridge;
+       position: Relative;
+       height: 75px;
+       width: 100px;
+       text-align: Center;
+     }
+     .header {
+       position: Absolute;
+       top: 0;
+       left: 50%;
+       transform: translate(-50%, 0%);
+     }
+     .fill {
+       background-color: LightGray;
+     }
+     .footer {
+       position: Absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translate(-50%, 0%);
+     }
+  </style>
+  <script>
+
+function adv(name, ref, levels, url, introUrl) {
+  var result = "<th>";
+  if(url)
+    result += "<a href='" + url + "'>";
+  result += name;
+  if(url)
+    result += "</a>";
+  if(ref || levels)
+    result += "<br/>("
+  if(ref)
+    result += ref;
+  if(ref && levels)
+    result += " ";
+  if(levels)
+    result += "lvl " + levels;
+  if(ref || levels)
+    result += ")"
+  if(introUrl)
+    result += ' <a href="' + introUrl + '">(Intro)</a>';
+  result += "</th>";
+  return result;
+}
+
+function pctd(rows, name, player, url, foot) {
+  var footRef = foot ? "<a href='#foot_" + foot + "'>(" + foot + ")</a>" : null;
+  var nameAndPlayer =
+    (url ? "<a href='" + url + "'>" : "") +
+    (player ? "<b>" : "<i>") + name + (player ? "</b>" : "</i>") +
+    (url ? "</a>" : "") +
+    (player ? " (" + player + ")" : "");
+  var result = rows > 1 ? "<td rowspan='" + rows + "'>" : "<td>";
+  result += "<div class='header'>" + nameAndPlayer + "</div>";
+  if(footRef)
+    result += "<div class='footer'>" + footRef + "</div>";
+  result += "</td>";
+  return result;
+}
+
+  </script>
+</head>
+
+<body>
+
+<h1 align="center">Adventure History</h1>
+
+<table>
+  <script>
+    document.writeln(
+      "<tr>",
+      adv("Valley of Mist", "JH", "1", "Classic/Adventures/valley-of-mist.html"),
+      pctd(10, "Kragthorn", "Norm", "Classic/Bones/kragthorn.html", 7),
+      pctd(1, "Salanar", "Norm", "Classic/Bones/salanar.html", 1),
+      pctd(12, "Alinor", "Caroline", "Classic/Bones/alinor.html", 11),
+      pctd(12, "Maub", "Caroline", "Classic/PCs/maub.html", null),
+      "<td colspan='2' class='fill'></td>",
+      pctd(8, "Lorlof", "Jim W.", "Classic/PCs/lorlof.html", "R"),
+      pctd(8, "Zoflin", "Jim W.", "Classic/PCs/zoflin.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Valley of the Claw", "JH", '1', "Classic/Adventures/valley-of-the-claw.html"),
+      pctd(4, "Klantu", "Norm", null, 4),
+      pctd(11, "Benedict Greybane", "Rich", "Classic/Bones/benedict.html", 12),
+      pctd(8, "Gallomere", "Rich", "Classic/PCs/gallomere.html", 6),
+      pctd(1, "Klanvar Stoutheart", "Diane", "Classic/Bones/klanvar.html", 2),
+      pctd(1, "Withelfring", "Diane", null, "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Castle Anithil", "JH", null, "Classic/Adventures/castle-anithil.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Keep on the Borderlands", "B2", "1-3", "https://www.drivethrurpg.com/product/17158/B2-The-Keep-on-the-Borderlands-Basic"),
+      pctd(2, "Zandor", "Nikki", null, "R"),
+      pctd(1, "Quenlyn", "Nikki", null, 3),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Village of Hommlet", "T1", "1", "https://www.drivethrurpg.com/product/17067/T1-The-Village-of-Hommlet-1e"),
+      pctd(1, "Maren", "Nikki", null, "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Slave Pits of the Undercity", "A1", "4-7", "https://www.drivethrurpg.com/product/176883/A1-Slave-Pits-of-the-Undercity-1e"),
+      pctd(2, "Garn", "Norm", null, 5),
+      pctd(7, "Hobob", "Jeff", null, "R"),
+      pctd(7, "Dworkin", "Jeff", "Classic/Bones/dworkin.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Forgotten South", "JH", null, "Classic/Adventures/forgotten-south.html"),
+      pctd(6, "Andorell", "Richard", null, "R"),
+      pctd(4, "Bryan", "Richard", "Classic/Bones/bryan.html", 9),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Hidden Shrine of Tamoachan", "C1", "5-7", "https://www.drivethrurpg.com/product/17031/C1-The-Hidden-Shrine-of-Tamoachan-1e"),
+      pctd(1, "Beef", "Norm", "Classic/Bones/beef.html", 1),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Towers of Teeth", "JH", null, "Classic/Adventures/towers-of-teeth.html"),
+      pctd(21, "Solvar", "Norm", "Classic/PCs/solvar.html", null),
+      pctd(2, "Carmine", "Luz", "Classic/Bones/carmine.html", 8),
+      pctd(6, "Juanita", "Luz", null, "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Ghost Tower of Inverness", "C2", "5-7", "https://www.drivethrurpg.com/product/17032/C2-The-Ghost-Tower-of-Inverness-1e"),
+      pctd(3, "Gallomere", null, "Classic/PCs/gallomere.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Palenel Monastery", "JH", "2-5", "Classic/Adventures/palenel-monastery.html"),
+      pctd(2, "Labyrinthiel", "Norm", "Classic/Bones/labyrinthiel.html", 10),
+      pctd(4, "Morgan", "Luz", null, "R"),
+      pctd(2, "Dwindolyn", "Richard", null, 14),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Forest of Doom/Ilitian", "Dra73/JH", "4-7", "Classic/Adventures/ilitian.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Palace of the Silver Princess", "B3", "1-3", "https://www.drivethrurpg.com/product/17159/B3-Palace-of-the-Silver-Princess-Basic"),
+      pctd(6, "Shameray", "Norm", "Classic/PCs/shameray.html", null),
+      pctd(17, "Merydel", "Caroline", "Classic/PCs/merydel.html", null),
+      pctd(6, "Tamara", "Caroline", "Classic/Bones/tamara.html", null),
+      pctd(4, "Fyndrolf", "Rich", null, 16),
+      pctd(1, "Grundor", "Rich", null, 15),
+      pctd(5, "Hildegard", "Shannon", "Classic/Bones/hildegard.html", 17),
+      pctd(5, "Llauralyl", "Shannon", "Classic/Bones/llauralyl.html", 17),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Sinister Secret of Saltmarsh", "U1", "1-3", "https://www.drivethrurpg.com/product/17069/U1-The-Sinister-Secret-of-Saltmarsh-1e"),
+      pctd(4, "Alaryn Sharpeye", "Rich", "Classic/Bones/alaryn.html", 17),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Secret of Bone Hill", "L1", "2-4", "https://www.drivethrurpg.com/product/17059/L1-The-Secret-of-Bone-Hill-1e"),
+      "<td colspan='2' rowspan='3' class='fill'></td>",
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Ruin at Eastcreek", "JH", "2-5", "Classic/Adventures/ruin-at-eastcreek.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Secret of the Slavers Stockade", "A2", "4-7", "https://www.drivethrurpg.com/product/176893/A2-Secret-of-the-Slavers-Stockade-1e"),
+      pctd(11, "Rodnurg", "Rich", "Classic/PCs/rodnurg.html", 24),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Plane of Ghardis", "JH", null, "Classic/Adventures/plane-of-ghardis.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Beyond the Crystal Cave", "UK1", "4-7", "https://www.drivethrurpg.com/product/17072/UK1-Beyond-the-Crystal-Cave-1e"),
+      "<td rowspan='4' class='fill'></td>",
+      "<td rowspan='1' class='fill'></td>",
+      pctd(11, "Gallomere", null, "Classic/PCs/gallomere.html", null),
+      pctd(11, "Tamara", "Dave", "Classic/Bones/tamara.html", null),
+      pctd(11, "Shameray", "Kristy", "Classic/PCs/shameray.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Into the Forgotten Realms", "Dr95", "5-8", null),
+      pctd(10, "Maub", null, "Classic/PCs/maub.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Castle Amber", "X2", "3-6", "https://www.drivethrurpg.com/product/17088/X2-Castle-Amber-Basic"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Search for Kragthorn", "JH", null, "Classic/Adventures/search-for-kragthorn.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Twofold Talisman", "Dr84/85", "5-7", null),
+      pctd(1, "Kragthorn", null, "Classic/Bones/kragthorn.html", 18),
+      pctd(3, "Linmer", "Rob", "Classic/Bones/linmer.html", 19),
+      pctd(3, "Herclin", "Rob", "Classic/Bones/herclin.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Thunderdelve Mountain", "XS2", "7-9", "https://www.drivethrurpg.com/product/17155/XS2-Thunderdelve-Mountain-Basic"),
+      pctd(5, "Kragthorn", null, "Classic/Bones/kragthorn.html", 20),
+      pctd(2, "Garfum", "Geoff", "Classic/Bones/garfum.html", null),
+      pctd(2, "Thirmirel", "Geoff", "Classic/Bones/thirmirel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Ruins of Andril", "Dr81", "8-11", null, "Classic/Adventures/ruins-of-andril-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Master of the Desert Nomads", "X4", "6-9", "https://www.drivethrurpg.com/product/17094/X4-Master-of-the-Desert-Nomads-Basic", "Classic/Adventures/master-of-the-desert-nomads-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Dream Glen", "JH", "6-8", "Classic/Adventures/dream-glen.html", "Classic/Adventures/dream-glen-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Lost Caverns of Tsojcanth", "S4", "6-10", "https://www.drivethrurpg.com/product/17066/S4-The-Lost-Caverns-of-Tsojcanth-1e", "Classic/Adventures/lost-caverns-of-tsojcanth-intro.html"),
+      pctd(2, "Rodnurg", null, "Classic/PCs/rodnurg.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Hunt in Great Allindel", "Du17", "4-7", null, "Classic/Adventures/hunt-in-great-allindel-intro.html"),
+      pctd(1, "Kragthorn", null, "Classic/Bones/kragthorn.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Sword of Justice", "Dr92", "1-2", null),
+      pctd(7, "Relthior", "Norm", "Classic/PCs/relthior.html", null),
+      pctd(7, "Theora", "Norm", "Classic/PCs/theora.html", null),
+      pctd(7, "Valorion", "Caroline", "Classic/Bones/valorion.html", "R"),
+      "<td rowspan='6' class='fill'></td>",
+      pctd(3, "Liana", "Rich?", "Classic/Bones/liana.html", "R"),
+      "<td rowspan='4' colspan='3' class='fill'></td>",
+      pctd(7, "Greyling", "Kristy", "Classic/Bones/greyling.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Citidel by the Sea", "Dr78", "1-3", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Creature of the Caves", "JH", null, "Classic/Adventures/creature-of-the-caves.html"),
+      pctd(5, "Chomsky", "Kristy", "Classic/Bones/chomsky.html", 27),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Dwellers of the Forbidden City", "I1", "4-7", "https://www.drivethrurpg.com/product/17046/I1-Dwellers-of-the-Forbidden-City-1e"),
+      pctd(1, "Herclin", "Rich", "Classic/Bones/herclin.html", null),
+      pctd(1, "Garfum", null, "Classic/Bones/garfum.html", null),
+      pctd(1, "Thirmirel", null, "Classic/Bones/thirmirel.html", 30),
+      pctd(1, "Kragthorn", null, "Classic/Bones/kragthorn.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("In Search of the Unknown", "B1", "1", "https://www.drivethrurpg.com/product/17081/B1-In-Search-of-the-Unknown-Basic"),
+      "<td rowspan='1' colspan='2' class='fill'></td>",
+      pctd(3, "Dachsund", "Dave", "Classic/Bones/dachshund.html", "R"),
+      pctd(1, "Tofutti", "Dave", "Classic/Bones/tofutti.html", "R"),
+      "<td rowspan='1' colspan='2' class='fill'></td>",
+      pctd(1, "Oenone", "Kevin", "Classic/Bones/oenone.html", null),
+      pctd(1, "Ganymede", "Marta", "Classic/Bones/ganymede.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Rahasia", "B7", "1-3", "https://www.drivethrurpg.com/product/17113/B7-Rahasia-Basic"),
+      pctd(2, "Herclin", null, "Classic/Bones/herclin.html", "R"),
+      "<td rowspan='1' class='fill'></td>",
+      "<td rowspan='1' class='fill'></td>",
+      pctd(2, "Garfum", null, "Classic/Bones/garfum.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Valley of the Earth Mother", "Dr102", "4-6", null),
+      pctd(1, "Ferocia", "Caroline", "Classic/Bones/ferocia.html", "R"),
+      pctd(1, "Grizwaldo", "Rich", "Classic/Bones/grizwaldo.html", "R"),
+      pctd(1, "Samet", "Dave", "Classic/Bones/samet.html", "R"),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Oenone", null, "Classic/Bones/oenone.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("In the Dread of Night", "Du24", "1-3", null, "Classic/Adventures/in-the-dread-of-night-intro.html"),
+      pctd(1, "Shazera", "Norm", "Classic/Bones/shazera.html", 33),
+      "<td rowspan='1' class='fill'></td>",
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Fleur", "Caroline", "Classic/Bones/fleur.html", "R"),
+      pctd(1, "Grimla", "Rich", "Classic/Bones/grimla.html", "R"),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Bismuth", "Dave", "Classic/Bones/bismuth.html", "R"),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Lefty", "Kristy", "Classic/Bones/lefty.html", "R"),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Sarano", "Geoff", "Classic/Bones/sarano.html", "R"),
+      pctd(1, "Allagola", "Geoff", "Classic/Bones/allagola.html", "R"),
+      pctd(1, "Ponk", "Kevin", "Classic/Bones/ponk.html", "R"),
+      pctd(1, "Silmer", "Kevin", "Classic/Bones/silmer.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Nine-Tenths of the Law", "Du26", "7-10", null, "Classic/Adventures/nine-tenths-of-the-law-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Special Delivery", "JH", "6-8", "Classic/Adventures/special-delivery.html"),
+      pctd(2, "Kragthorn", null, "Classic/Bones/kragthorn.html", 21),
+      pctd(5, "Solvar", null, "Classic/PCs/solvar.html", 23),
+      pctd(4, "Maub", null, "Classic/PCs/maub.html", 28),
+      pctd(4, "Merydel", null, "Classic/PCs/merydel.html", 28),
+      pctd(6, "Rodnurg", null, "Classic/PCs/rodnurg.html", 25),
+      pctd(3, "Gallomere", null, "Classic/PCs/gallomere.html", 22),
+      pctd(5, "Tamara", null, "Classic/Bones/tamara.html", "R"),
+      pctd(23, "Shameray", null, "Classic/PCs/shameray.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Seeing Both Sides", "JH", "6-8", "Classic/Adventures/seeing-both-sides.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Better Off Dead", "JH", "6-8", "Classic/Adventures/better-off-dead.html", "Classic/Adventures/better-off-dead-intro.html"),
+      "<td rowspan='3' class='fill'></td>",
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Blight on the Land", "Du38", "8-12", null, "Classic/Adventures/blight-on-the-land-intro.html"),
+      pctd(20, "Gallomere", null, "Classic/PCs/gallomere.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Wayward Wood", "Du32", "6-9", null, "Classic/Adventures/wayward-wood-intro.html"),
+      pctd(19, "Maub", null, "Classic/PCs/maub.html", null),
+      pctd(1, "Merydel", null, "Classic/PCs/merydel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Mud Sorcerer's Tomb", "Du37", "10-14", null),
+      pctd(11, "Relthior", null, "Classic/PCs/relthior.html", 29),
+      pctd(18, "Theora", null, "Classic/PCs/theora.html", null),
+      "<td rowspan='18' class='fill'></td>",
+      pctd(1, "Merydel", null, "Classic/PCs/merydel.html", 25),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ghazal", "Du30", "6-8", null, "Classic/Adventures/ghazal-intro.html"),
+      pctd(17, "Rodnurg", null, "Classic/PCs/rodnurg.html", null),
+      pctd(17, "Merydel", null, "Classic/PCs/merydel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Khamsa's Folly", "Du40", "4-6", null, "Classic/Adventures/khamsas-folly-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Pipes of Doom", "Du28", "6-10", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Ship of the Night", "Du20", "7-9", null, "Classic/Adventures/ship-of-the-night-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Sleep of Ages", "Du69", "5-8", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Assault on the Aerie of the Slave Lords", "A3", "6-9", "https://www.drivethrurpg.com/product/17029/A3-Assault-on-the-Aerie-of-the-Slave-Lords-1e"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Towers of Teeth", "JH", null, "Classic/Adventures/towers-of-teeth.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Hitch in Time", "Du24", "7-10", null, "Classic/Adventures/hitch-in-time-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Tarfil's Tomb", "Du27", "10-14", null, "Classic/Adventures/tarfils-tomb-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Asflag's Unintentional Emporium", "Du36", "3-7", null, "Classic/Adventures/asflags-unintentional-emporium-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Steelheart", "Du53", "7-9", null, "Classic/Adventures/steelheart-intro.html"),
+      pctd(7, "Relthior", null, "Classic/PCs/relthior.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ailamere's Lair", "Du51", "6-9", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Operation Manta Ray", "Du66", "6-9", null, "Classic/Adventures/operation-manta-ray-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Stepping Stones", "Du68", "6-8", null, "Classic/Adventures/stepping-stones-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Twilight's Last Gleaming", "Du35", "8-10", null, "Classic/Adventures/twilights-last-gleaming-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("They Also Serve", "Du10", "5-7", null, "Classic/Adventures/they-also-serve-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Peltor's Dig", "JH", "6-8", "Classic/Adventures/peltors-dig.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Stars at Night", "JH", "1", "BT/Adventures/stars-at-night.html"),
+      pctd(4, "Lithia", "Norm", "BT/PCs/lithia.html", null),
+      pctd(4, "Belle", "Caroline", "BT/PCs/belle.html", null),
+      pctd(4, "Copper", "Rich", "BT/PCs/copper.html", null),
+      pctd(4, "Jorgi", "Dave", "BT/PCs/jorgi.html", null),
+      pctd(4, "Adan", "Kristy", "BT/PCs/adan.html", null),
+      pctd(4, "Jaron", "spare", "BT/PCs/jaron.html", null),
+      pctd(2, "Cordella", "spare", "BT/Bones/cordella.html", 26),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Case of the Missing Mage", "JH", "1-2", "BT/Adventures/case-of-the-missing-mage.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Shadows Over Swallow's Lake", "JH", "2-4", "BT/Adventures/shadows-over-swallows-lake.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Fish Are Biting", "JH", "2-4", "BT/Adventures/fish-are-biting.html"),
+      pctd(1, "Gokono", "spare", "BT/PCs/gokono.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Gone Today, Here Tomorrow", "RH", "1", null, "KB/Adventures/gone-today-here-tomorrow-intro.html"),
+      pctd(17, "Ghost", "Norm", "KB/PCs/ghost.html", null),
+      pctd(17, "Tansel", "Caroline", "KB/PCs/tansel.html", null),
+      pctd(17, "Jodaf", "Jim", "KB/PCs/jodaf.html", null),
+      pctd(17, "Grumble", "Dave", "KB/PCs/grumble.html", null),
+      pctd(17, "Salendria", "Kristy", "KB/PCs/salendria.html", null),
+      pctd(17, "Lyric", "Robert", "KB/PCs/lyric.html", null),
+      pctd(17, "Narwyn", "spare", "KB/PCs/narwyn.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Trading Favors", "RH", "?", null, "KB/Adventures/trading-favors-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Weapons of the Mighty Dwarf", "WoTC", "3", "https://www.drivethrurpg.com/product/3737/The-Forge-of-Fury-3e", "KB/Adventures/weapons-of-the-mighty-dwarf-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Mountain Glen", "RH", "?", null, "KB/Adventures/mountain-glen-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Whispers on the Wind", "RH", "?", null, "KB/Adventures/whispers-on-the-wind-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Trail Goes Cold", "RH", "?", null, "KB/Adventures/trail-goes-cold-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("In the King's Service", "RH", "?", null, "KB/Adventures/in-the-kings-service-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Lost in the Moment", "RH", "?", null, "KB/Adventures/lost-in-the-moment-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Stay the Course", "RH", "?", null, "KB/Adventures/stay-the-course-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Eastern Front", "RH", "?", null, "KB/Adventures/eastern-front-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Family Ties", "RH", "?", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Heart of the Nightfang Spire", "RH", "10", "https://www.drivethrurpg.com/product/24984/Heart-of-Nightfang-Spire-3e"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Massacre at Fort Dolor", "Du157", "8", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Reversal of Fortune", "RH", "?", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Sleeper in the Tomb of Dreams", "Du155", "8", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Last Breaths of Ashenport", "Du156", "8", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Journey to the North Pole", "RH", "?", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Dark and Stormy Knight", "WoTC", "1", "https://www.dmsguild.com/product/169621/A-Dark-and-Stormy-Knight-35"),
+      pctd(2, "Fourbits", "Norm", "KB/PCs/fourbits.html", null),
+      pctd(2, "Om", "Caroline", "KB/PCs/om.html", null),
+      pctd(2, "Peto", "Jim", "KB/PCs/peto.html", null),
+      pctd(2, "Atasi", "Avalon", "KB/PCs/atasi.html", null),
+      pctd(2, "Goknol", "Dave", "KB/PCs/goknol.html", null),
+      pctd(2, "Welk", "Kristy", "KB/PCs/welk.html", null),
+      pctd(2, "Loquyl", "Robert", "KB/PCs/loquyl.html", null),
+      pctd(2, "Regnar", "Scott", "KB/PCs/regnar.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Valley of the Snails", "Du87", "1", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Saving Colonel Carynn", "JH", "3-5", "BT/Adventures/saving-colonel-carynn.html"),
+      pctd(4, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(4, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(4, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(4, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(4, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(4, "Jaron", null, "BT/PCs/jaron.html", null),
+      pctd(4, "Gokono", null, "BT/PCs/gokono.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("O Come, All Ye Faithful", "JH", "3-5", "BT/Adventures/come-all-ye-faithful.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Miner Mishap", "JH", "3-5", "BT/Adventures/miner-mishap.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Lucky Break", "JH", "3-5", "BT/Adventures/lucky-break.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ex Keraptis Cum Amore", "Du77", "8-12", null),
+      pctd(1, "Relthior", null, "Classic/PCs/relthior.html", null),
+      pctd(1, "Theora", null, "Classic/PCs/theora.html", null),
+      pctd(1, "Maub", null, "Classic/PCs/maub.html", null),
+      pctd(1, "Gallomere", null, "Classic/PCs/gallomere.html", null),
+      pctd(1, "Rodnurg", null, "Classic/PCs/rodnurg.html", null),
+      pctd(1, "Merydel", null, "Classic/PCs/merydel.html", null),
+      pctd(1, "Shameray", null, "Classic/PCs/shameray.html", null),
+      pctd(1, "Dibjic", "Robert", "Classic/PCs/dibjic.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Scrubbing Troubles", "JH", "4-6", "BT/Adventures/scrubbing-troubles.html"),
+      pctd(5, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(5, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(5, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(5, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(5, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(5, "Jaron", null, "BT/PCs/jaron.html", null),
+      pctd(5, "Gokono", null, "BT/PCs/gokono.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Slave Vats of the Yuan-Ti", "Du69", "3-5", null, "BT/Adventures/slave-vats-of-the-yuan-ti-intro.html"),
+      pctd(4, "Silv", "Robert", "BT/PCs/silv.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Dark Dawn", "JH", "4-6", "BT/Adventures/dark-dawn.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Dark Place", "Du49", "5-7", null, "BT/Adventures/dark-place-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Pit", "Du17", "3-5", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Forgotten Forge", "Eberron Intro", "1", "https://www.dmsguild.com/product/28474/Eberron-Campaign-Setting-3e"),
+      pctd(2, "Kaschva", "Norm", "Eberron/PCs/kaschva.html", null),
+      pctd(2, "Lisanya", "Caroline", "Eberron/PCs/lisanya.html", null),
+      pctd(2, "Kap", "Jim", "Eberron/PCs/kap.html", null),
+      pctd(2, "Grok", "Dave", "Eberron/PCs/grok.html", null),
+      pctd(2, "Tiza", "Dave", "Eberron/PCs/tiza.html", null),
+      pctd(2, "Jampfiz", "Kristy", "Eberron/PCs/jampfiz.html", null),
+      pctd(2, "Alon", "Robert", "Eberron/PCs/alon.html", null),
+      pctd(2, "Ransa", "Scott", "Eberron/PCs/ransa.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Shadows of the Last War", "Eberron", "2", "https://www.dmsguild.com/product/3739/EBERRON-Shadows-of-the-Last-War-35"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Hunt for a Hierophant", "Du64", "6-8", null, "Classic/Adventures/hunt-for-a-hierophant-intro.html"),
+      pctd(4, "Relthior", null, "Classic/PCs/relthior.html", null),
+      pctd(4, "Theora", null, "Classic/PCs/theora.html", null),
+      pctd(4, "Maub", null, "Classic/PCs/maub.html", null),
+      pctd(4, "Gallomere", null, "Classic/PCs/gallomere.html", null),
+      pctd(4, "Rodnurg", null, "Classic/PCs/rodnurg.html", null),
+      pctd(4, "Merydel", null, "Classic/PCs/merydel.html", null),
+      pctd(4, "Shameray", null, "Classic/PCs/shameray.html", null),
+      pctd(4, "Dibjic", null, "Classic/PCs/dibjic.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Elminster's Back Door", "Du30", "any", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Thiondar's Legacy", "Du30", "8-12", null, "Classic/Adventures/thiondars-legacy-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Threshold of Evil", "Du10", "14-18", null, "Classic/Adventures/threshold-of-evil-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Strangers in a Very Strange Land", "JH", "6-8", "Midnight/Adventures/strangers-in-a-very-strange-land.html"),
+      pctd(2, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(2, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(2, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(2, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(2, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(2, "Silv", null, "BT/PCs/silv.html", null),
+      pctd(2, "Gokono", "Scott", "BT/PCs/gokono.html", null),
+      pctd(2, "Jaron", null, "BT/PCs/jaron.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Knowledge Is Power", "GenCon2005", "6", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Below Vulture Point", "Du39", "1", null),
+      pctd(7, "Philisia", "Norm", "OldLands/PCs/philisia.html", null),
+      pctd(7, "Flyn", "Caroline", "OldLands/PCs/flyn.html", null),
+      pctd(7, "Porig", "Rich", "OldLands/PCs/porig.html", null),
+      pctd(7, "Dubai", "Dave", "OldLands/PCs/dubai.html", null),
+      pctd(7, "Valshar", "Kristy", "OldLands/PCs/valshar.html", null),
+      pctd(7, "Jelthus", "Robert", "OldLands/PCs/jelthus.html", null),
+      pctd(7, "Lymmal", "Scott", "OldLands/PCs/lymmal.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Fountain of Health", "Du39", "1", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Isle of the Abbey", "Du34", "1-3", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Last of the Iron House", "Du39", "2-4", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Cauldron of Plenty", "Du21", "2-4", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ancient Blood", "Du20", "3-5", null),
+      pctd(2, "Quilvyn", "Avalon", "OldLands/PCs/quilvyn.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Collectibles", "JH", "3-5", "OldLands/Adventures/collectibles.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Lady of the Lake", "Du5", "1", null),
+      pctd(4, "Erynsial the Austere", "Norm", "OldLands/PCs/erynsial.html", "R"),
+      pctd(4, "Rowan", "Caroline", "OldLands/PCs/rowan.html", "R"),
+      pctd(4, "Todgnup", "Rich", "OldLands/PCs/todgnup.html", "R"),
+      pctd(4, "Goti", "Jim W.", "OldLands/PCs/goti.html", "R"),
+      pctd(4, "Philjin", "Dave", "OldLands/PCs/philjin.html", "R"),
+      pctd(4, "Chuq Constant Lee", "Kristy", "OldLands/PCs/chuq.html", "R"),
+      pctd(4, "Cyrronis", "Scott", "OldLands/PCs/cyrronis.html", "R"),
+      pctd(4, "Narbel Nozphinger", "Jim", "OldLands/PCs/narbel.html", "R"),
+      pctd(4, "Ailee", "Avalon", "OldLands/PCs/ailee.html", "R"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Trouble With Mylvin Wimbly", "Du5", "1-3", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Redcap's Revenge", "Du54", "1-3", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Inheritance", "Du26", "1-3", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Bookmobile", "JH", "3-5", "Midnight/Adventures/bookmobile.html"),
+      pctd(3, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(3, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(3, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(3, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(3, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(3, "Silv", null, "BT/PCs/silv.html", null),
+      pctd(3, "Gokono", null, "BT/PCs/gokono.html", null),
+      pctd(3, "Penespe", "Avalon", "BT/PCs/penespe.html", null),
+      pctd(3, "Jaron", null, "BT/PCs/jaron.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Dark Conventicle", "Du11", "8-12", null, 'Midnight/Adventures/dark-conventicle-intro.html'),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("It's a Wonderful Last Age", "JH", "7-9", "Midnight/Adventures/its-a-wonderful-last-age.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Tallow's Deep", "Du18", "4-7", null),
+      pctd(2, "Philisia", null, "OldLands/PCs/philisia.html", null),
+      pctd(2, "Flyn", null, "OldLands/PCs/flyn.html", null),
+      pctd(2, "Porig", null, "OldLands/PCs/porig.html", null),
+      pctd(2, "Dubai", null, "OldLands/PCs/dubai.html", null),
+      pctd(2, "Valshar", null, "OldLands/PCs/valshar.html", null),
+      pctd(2, "Jelthus", null, "OldLands/PCs/jelthus.html", null),
+      pctd(2, "Lymmal", null, "OldLands/PCs/lymmal.html", null),
+      pctd(2, "Quilvyn", null, "OldLands/PCs/quilvyn.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Crypt of Istaris", "Du9", "3-5", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Disappearing Trick", "JH", "7-9", "Midnight/Adventures/disappearing-trick.html"),
+      pctd(2, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(2, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(2, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(2, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(2, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(2, "Silv", null, "BT/PCs/silv.html", null),
+      pctd(2, "Gokono", null, "BT/PCs/gokono.html", null),
+      pctd(2, "Penespe", null, "BT/PCs/penespe.html", null),
+      pctd(2, "Jaron", null, "BT/PCs/jaron.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Tomb of Horrors", "S1", "10-14", "https://www.drivethrurpg.com/product/176871/S1-Tomb-of-Horrors-1e"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Missing Negotiator", "NJ", null, null),
+      pctd(2, "Arrettell Bravesong", "Jim", "Realm/PCs/Arrettell.html", null),
+      pctd(2, "Yda", "Caroine", "Realm/PCs/Yda.html", null),
+      pctd(2, "Durgron", "Rich", "Realm/PCs/Durgron.html", null),
+      pctd(2, "Dostick", "Dave", "Realm/PCs/Dostick.html", null),
+      pctd(2, "Rivvea", "Avalon", "Realm/PCs/Rivvea.html", null),
+      pctd(2, "Rakjuz", "Robert", "Realm/PCs/Rakjuz.html", null),
+      pctd(2, "Glide", "Scott", "Realm/PCs/Glide.html", null),
+      pctd(2, "Commander Noxia", "spare", "Realm/PCs/Noxia.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Peddlers at Stormreach", "NJ", null, null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Raiders of the Chanth", "Du44", '3-5', null),
+      pctd(4, "Philisia", null, "OldLands/PCs/philisia.html", null),
+      pctd(4, "Flyn", null, "OldLands/PCs/flyn.html", null),
+      pctd(4, "Porig", null, "OldLands/PCs/porig.html", null),
+      pctd(4, "Dubai", null, "OldLands/PCs/dubai.html", null),
+      pctd(4, "Quilvyn", null, "OldLands/PCs/quilvyn.html", null),
+      pctd(1, "Lymmal", null, "OldLands/PCs/lymmal.html", null),
+      pctd(1, "Valshar", null, "OldLands/PCs/valshar.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Nymph's Reward", "Du29", '4-6', null),
+      pctd(3, "Jelthus", null, "OldLands/PCs/jelthus.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("White Plume Mountain", "S2", '5-10', "https://www.drivethrurpg.com/product/17064/S2-White-Plume-Mountain-1e"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Dreadful Vegtiges", "Du71", '4-7', null, "OldLands/Adventures/dreadful-vestiges-intro.html"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Saving Sassro the Theurge", "NJ", null, null),
+      pctd(2, "Arrettell Bravesong", null, "Realm/PCs/Arrettell.html", null),
+      pctd(2, "Yda", null, "Realm/PCs/Yda.html", null),
+      pctd(2, "Durgron", null, "Realm/PCs/Durgron.html", null),
+      pctd(2, "Dostick", null, "Realm/PCs/Dostick.html", null),
+      pctd(2, "Rivvea", null, "Realm/PCs/Rivvea.html", null),
+      pctd(2, "Rakjuz", null, "Realm/PCs/Rakjuz.html", null),
+      pctd(2, "Glide", null, "Realm/PCs/Glide.html", null),
+      pctd(2, "Commander Noxia", null, "Realm/PCs/Noxia.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Invasion", "NJ", null, null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("In Pursuit of the Slayer", "Du15", '6-9', null),
+      pctd(1, "Philisia", null, "OldLands/PCs/philisia.html", null),
+      pctd(1, "Flyn", null, "OldLands/PCs/flyn.html", null),
+      pctd(1, "Porig", null, "OldLands/PCs/porig.html", null),
+      pctd(1, "Dubai", null, "OldLands/PCs/dubai.html", null),
+      pctd(1, "Quilvyn", null, "OldLands/PCs/quilvyn.html", null),
+      pctd(1, "Jelthus", null, "OldLands/PCs/jelthus.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Silent Tide", "PSOP #1", '1-5', "https://paizo.com/products/btpy84k0?Pathfinder-Society-Scenario-1-Silent-Tide"),
+      pctd(3, "Tilhenger", "Norm", "Golarion/PCs/tilhenger.html", null),
+      pctd(3, "Lyli", "Caroline", "Golarion/PCs/lyli.html", null),
+      pctd(3, "Quain", "Rich", "Golarion/PCs/quain.html", null),
+      pctd(3, "Sporkatz", "Dave", "Golarion/PCs/sporkatz.html", null),
+      pctd(3, "Namei", "Avalon", "Golarion/PCs/namei.html", null),
+      pctd(3, "Varx", "Robert", "Golarion/PCs/varx.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Hydra's Fang Incident", "PSOP #2", '1-5', "https://paizo.com/products/btpy84k1?Pathfinder-Society-Scenario-2-The-Hydras-Fang-Incident"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Frozen Fingers of Midnight", "PSOP #4", '1-5', "https://paizo.com/products/btpy84k3?Pathfinder-Society-Scenario-4-The-Frozen-Fingers-of-Midnight"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Separation Anxiety", "JH", "6-8", null),
+      pctd(1, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(1, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(1, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(1, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(1, "Penespe", null, "BT/PCs/penespe.html", null),
+      pctd(1, "Silv", null, "BT/PCs/silv.html", null),
+      pctd(1, "Gokono", null, "BT/PCs/gokono.html", null),
+      pctd(1, "Adan", null, "BT/PCs/adan.html", null),
+      pctd(1, "Jaron", null, "BT/PCs/jaron.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Mists Of Mwangi", "PSOP #5", "1-5", "https://paizo.com/products/btpy8530?Pathfinder-Society-Scenario-5-Mists-of-Mwangi"),
+      pctd(7, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(7, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(5, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      pctd(5, "Namei", null, "Golarion/PCs/namei.html", null),
+      pctd(7, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(7, "Ningannel", "Kristy", "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Black Waters", "PSOP #6", "1-5", "https://paizo.com/products/btpy8531?Pathfinder-Society-Scenario-6-Black-Waters"),
+      "<td class='fill'></td>",
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Frostfur Captives", "PSOP #301", "1-5", "https://paizo.com/products/btpy8kab?Pathfinder-Society-Scenario-301-The-Frostfur-Captives"),
+      pctd(3, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Sewer Dragons of Absalom", "PSOP #302", "3-7", "https://paizo.com/products/btpy8kac?Pathfinder-Society-Scenario-302-Sewer-Dragons-of-Absalom"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Storming the Diamond Gate", "PSOP #3-25", "3-7", "https://paizo.com/products/btpy8r0a?Pathfinder-Society-Scenario-3-25-Storming-the-Diamond-Gate"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Echos of the Overwatched", "PSOP #3-07", "1-5", "https://paizo.com/products/btpy8n0m?Pathfinder-Society-Scenario-307-Echoes-of-the-Overwatched"),
+      "<td colspan='3' class='fill'></td>",
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Tide of Morning", "PSOP #23", "1-5", "https://paizo.com/products/btpy88sx?Pathfinder-Society-Scenario-23-Tide-of-Morning"),
+      "<td rowspan='3' class='fill'></td>",
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      pctd(1, "Namei", null, "Golarion/PCs/namei.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Shades of Grey", "GenCon2005", null, null),
+      pctd(1, "Tuwin", "Norm", null, null),
+      pctd(2, "Keepha Mokay", "Caroline", null, null),
+      pctd(2, "Nathys Grenil", "Dave", null, null),
+      pctd(2, "Brin", "Avalon", null, null),
+      pctd(2, "Muri Moseria", "Robert", null, null),
+      pctd(2, "Daktor Horns", "Scott", null, null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Signs in Shadow", "GenCon2005", null, null),
+      pctd(1, "Durak Darkwalker", "Norm", null, null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Eye of Murkul", "Du73", "6-8", null),
+      pctd(5, "Philisia", null, "OldLands/PCs/philisia.html", null),
+      pctd(5, "Flyn", null, "OldLands/PCs/flyn.html", null),
+      pctd(5, "Porig", null, "OldLands/PCs/porig.html", null),
+      pctd(3, "Dubai", null, "OldLands/PCs/dubai.html", null),
+      pctd(5, "Quilvyn", null, "OldLands/PCs/quilvyn.html", null),
+      pctd(5, "Lymmal", null, "OldLands/PCs/lymmal.html", null),
+      pctd(1, "Valshar", null, "OldLands/PCs/valshar.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Black Heart of Ulom", "Du11", "5-8", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Incident at Strathern Point", "Du21", "8-10", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Glass House", "Du15", "4-6", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(2, "Valshar", null, "OldLands/PCs/valshar.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Red Hand of Doom", "WoTC", "6-12", "https://www.drivethrurpg.com/product/28797/Red-Hand-of-Doom-3e"),
+      pctd(1, "Dubai", null, "OldLands/PCs/dubai.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Strange Developments", "NJ", null, null),
+      pctd(1, "Arrettell Bravesong", null, "Realm/PCs/Arrettell.html", null),
+      pctd(1, "Yda", null, "Realm/PCs/Yda.html", null),
+      pctd(1, "Durgron", null, "Realm/PCs/Durgron.html", null),
+      pctd(1, "Dostick", null, "Realm/PCs/Dostick.html", null),
+      pctd(1, "Rivvea", null, "Realm/PCs/Rivvea.html", null),
+      pctd(1, "Rakjuz", null, "Realm/PCs/Rakjuz.html", null),
+      pctd(1, "Glide", null, "Realm/PCs/Glide.html", null),
+      pctd(1, "Commander Noxia", null, "Realm/PCs/Noxia.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("A Tale of Two Halflings", "JH", null, "Midnight/Adventures/tale-of-two-halflings.html"),
+      pctd(1, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(1, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(1, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(1, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(1, "Penespe", null, "BT/PCs/penespe.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Crown of Shadow", null, "1", "https://www.drivethrurpg.com/product/479/Midnight-Crown-of-Shadow"),
+      pctd(1, "Vezco", "Norm", "Midnight/COS/vezco.html", null),
+      pctd(1, "Siamuk", "Caroline", "Midnight/COS/siamuk.html", null),
+      pctd(1, "Geta", "Rich", "Midnight/COS/geta.html", null),
+      pctd(1, "Kaonin", "Dave", "Midnight/COS/kaonin.html", null),
+      pctd(1, "Jedack", "Avalon", "Midnight/COS/jedack.html", null),
+      pctd(1, "Arkayde", "Scott", "Midnight/COS/arkayde.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Riding Dirty", "JH", null, null),
+      pctd(1, "Lithia", null, "BT/PCs/lithia.html", null),
+      pctd(1, "Belle", null, "BT/PCs/belle.html", null),
+      pctd(1, "Copper", null, "BT/PCs/copper.html", null),
+      pctd(1, "Jorgi", null, "BT/PCs/jorgi.html", null),
+      pctd(1, "Penespe", null, "BT/PCs/penespe.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("In Wrath's Shadow", "PSOP #4-02", "3-7", "https://paizo.com/products/btpy8r0c?Pathfinder-Society-Scenario-4-02-In-Wrath-s-Shadow"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 34),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", 34),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", 32),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", 34),
+      pctd(1, "Namei", null, "Golarion/PCs/namei.html", 34),
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", 32),
+      pctd(1, "Ningannel", "Scott", "Golarion/PCs/ningannel.html", 34),
+      pctd(1, "Quoslym", "Jim", "Golarion/PCs/quoslym.html", 31),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Night March of Kalkamedes", "PSOP #4-19", "1-5", "https://paizo.com/products/btpy8wdz?Pathfinder-Society-Scenario-4-19-The-Night-March-of-Kalkamedes"),
+      pctd(13, "Tilhenger", "Jim", "Golarion/PCs/tilhenger.html", null),
+      pctd(13, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(13, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(13, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      pctd(10, "Namei", null, "Golarion/PCs/namei.html", null),
+      pctd(13, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(3, "Ningannel", null, "Golarion/PCs/ningannel.html", 35),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Disappeared", "PSOP #4-11", "1-5", "https://paizo.com/products/btpy8v0h?Pathfinder-Society-Scenario-4-11-The-Disappeared"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("My Enemy's Enemy", "PSOP #4-14", "3-7", "https://paizo.com/products/btpy8v0k?Pathfinder-Society-Scenario-4-14-My-Enemys-Enemy"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Fortress of the Nail", "PSOP #4-13", "5-9", "https://paizo.com/products/btpy8v0j?Pathfinder-Society-Scenario-4-13-Fortress-of-the-Nail"),
+      pctd(10, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Veteran's Vault", "PSOP #4-18", "1-5", "https://paizo.com/products/btpy8wdy?Pathfinder-Society-Scenario-4-18-The-Veterans-Vault"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Town of Ironwood Watch", "PSOP #4-17", "5-9", "https://paizo.com/products/btpy8wdx?Pathfinder-Society-Scenario-4-17-Tower-of-the-Ironwood-Watch"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Secrets Stones Keep", "PSOP #4-25", "5-9", "https://paizo.com/products/btpy8we5?Pathfinder-Society-Scenario-4-25-Glories-of-the-Past-Part-III-The-Secrets-Stones-Keep"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Technic Siege", "PSOP #6-03", "5-9", "https://paizo.com/products/btpy97n7?Pathfinder-Society-Scenario-6-03-The-Technic-Siege"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Beacon Below", "PSOP #6-04", "7-11", "https://paizo.com/products/btpy9984?Pathfinder-Society-Scenario-6-04-Beacon-Below"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Valley of Veiled Flame", "PSOP #6-07", "5-9", "https://paizo.com/products/btpy9987?Pathfinder-Society-Scenario-6-07-Valley-of-Veiled-Flame"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Igor's Challenge", null, "any", "https://www.dmsguild.com/product/203731/Igors-Challenge"),
+      "<td rowspan='3' class='fill'></td>",
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Slave Master's Mirror", "PSOP #6-11", "3-7", "https://paizo.com/products/btpy9a1z?Pathfinder-Society-Scenario-6-11-The-Slave-Masters-Mirror"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Test of Tar Kuata", "PSOP #6-19", "3-7", "https://paizo.com/products/btpy9ch3?Pathfinder-Society-Scenario-6-19-Test-of-Tar-Kuata"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Delian Tomb [Hellfrost]", null, "Novice", "https://drive.google.com/file/d/1T5YLtNv5fMlexFy0pSPySXr3cgOEAyM-/view"),
+      pctd(1, "Jujoro", "Norm", "Hellfrost/PCs/jujoro.html", null),
+      pctd(1, "Ninra", "Caroline", "Hellfrost/PCs/ninra.html", null),
+      pctd(1, "Pimla", "Rich", "Hellfrost/PCs/pimla.html", null),
+      pctd(1, "Rodrar", "Dave", "Hellfrost/PCs/rodrar.html", null),
+      pctd(1, "Ilomoch", "Marie", "Hellfrost/PCs/ilomoch.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Returned to Sky", "PSOP #6-20", "7-11", "https://paizo.com/products/btpy9ctx?Pathfinder-Society-Scenario-6-20-Returned-to-Sky"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 36),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", 36),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", 37),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("It's What's for Dinner", "JH [Adapted from adventure in The Last Sons]", "Novice", null),
+      pctd(1, "Huang Shi", "Norm", "Deadlands/PCs/huang-shi.html", null),
+      pctd(1, "Black Owl", "Caroline", "Deadlands/PCs/black-owl.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, 'Ida "Rabbit" Jaeger', "Dave", "Deadlands/PCs/ida-rabbit-jaeger.html", null),
+      pctd(1, 'Roy "Mad Elk" Barclay', "Spare", "Deadlands/PCs/roy-mad-elk-barclay.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Tapestry's Toil", "PSOP #6-21", "5-9", "https://paizo.com/products/btpy9cty"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Dead Man's Debt", "PSOP #7-24 [reskinned for Hellfrost]", "Novice", "https://paizo.com/products/btpy9lzz?Pathfinder-Society-Scenario-7-24-Dead-Mans-Debt"),
+      pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
+      pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
+      pctd(1, "Pimla", null, "Hellfrost/PCs/pimla.html", null),
+      pctd(1, "Rodrar", null, "Hellfrost/PCs/rodrar.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ancient's Anguish", "PSOP #7-11", "7-11", "https://paizo.com/products/btpy9hgy?Pathfinder-Society-Scenario-7-11-Ancients-Anguish"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Perils of the Pirate Pact", "PSOP #17 [reskinned for Hellfrost]", "Novice", "https://paizo.com/products/btpy87or?Pathfinder-Society-Scenario-17-Perils-of-the-Pirate-Pact"),
+      pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
+      pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Rodrar", null, "Hellfrost/PCs/rodrar.html", null),
+      pctd(1, "Ilomoch", "Spare", "Hellfrost/PCs/ilomoch.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Captive in Crystal", "PSOP #7-13", "5-9", "https://paizo.com/products/btpy9hh0?Pathfinder-Society-Scenario-7-13-Captive-in-Crystal"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Half Truths", "JH", "Novice", null),
+      pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
+      pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
+      pctd(1, "Pimla", null, "Hellfrost/PCs/pimla.html", null),
+      pctd(1, "Rodrar", null, "Hellfrost/PCs/rodrar.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Naga", "Scott", "Hellfrost/PCs/naga.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Thralls of the Shattered God", "PSOP #7-17", "5-9", "https://paizo.com/products/btpy9huy?Pathfinder-Society-Scenario-7-17-Thralls-of-the-Shattered-God"),
+      pctd(2, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(2, "Lyli", null, "Golarion/PCs/lyli.html", 38),
+      pctd(2, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(2, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='2' class='fill'></td>",
+      pctd(2, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(2, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Abducted in Aether", "PSOP #7-23", "7-11", "https://paizo.com/products/btpy9k96?Pathfinder-Society-Scenario-7-23-Abducted-in-Aether"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Shadow of Death", "JH", "Seasoned", null),
+      pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
+      pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Rodrar", null, "Hellfrost/PCs/rodrar.html", null),
+      pctd(1, "Ilomoch", null, "Hellfrost/PCs/ilomoch.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Orders From the Gate", "PSOP #7-25", "5-9", "https://paizo.com/products/btpy9m00?Pathfinder-Society-Scenario-7-25-Orders-from-the-Gate"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Promised Land", "Symbaroum", "0", null),
+      pctd(1, "Orlan of the House Daar", "Norm", "Symbaroum/PCs/orlan.html", null),
+      pctd(1, "Magdala", "Caroline", "Symbaroum/PCs/magdala.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Ansel", "Dave", "Symbaroum/PCs/ansel.html", null),
+      pctd(1, "Bartolom", "Spare", "Symbaroum/PCs/bartolom.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Ward Asunder", "PSOP #8-02", "3-7", "https://paizo.com/products/btpy9mbb?Pathfinder-Society-Scenario-802-Ward-Asunder"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(1, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(1, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Glass River Rescue", "PSOP #5-01 [reskinned for Symbaroum]", "0", "https://paizo.com/products/btpy8xkf?Pathfinder-Society-Scenario-5-01-The-Glass-River-Rescue"),
+      pctd(1, "Orlan of the House Daar", null, "Symbaroum/PCs/orlan.html", null),
+      pctd(1, "Magdala", null, "Symbaroum/PCs/magdala.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(1, "Ansel", null, "Symbaroum/PCs/ansel.html", null),
+      pctd(1, "Bartolom", null, "Symbaroum/PCs/bartolom.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Captives of Toil", "PSOP #8-03", "5-9", "https://paizo.com/products/btpy9mbc?Pathfinder-Society-Scenario-803-Captives-of-Toil"),
+      pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 39),
+      pctd(7, "Lyli", null, "Golarion/PCs/lyli.html", null),
+      pctd(7, "Quain", null, "Golarion/PCs/quain.html", null),
+      pctd(4, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      "<td rowspan='8' class='fill'></td>",
+      pctd(4, "Varx", null, "Golarion/PCs/varx.html", null),
+      pctd(3, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Cindersworn Pact", "PSOP #8-09", "5-9", "https://paizo.com/products/btpy9p8w?Pathfinder-Society-Scenario-809-Forged-in-Flame-Part-1-The-Cindersworn-Pact"),
+      pctd(6, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Refugees of the Weary Sky", "PSOP #8-17", "7-11", "https://paizo.com/products/btpy9qcc?Pathfinder-Society-Scenario-817-Refugees-of-the-Weary-Sky"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("From the Tome of Righteous Repose", "PSOP #8-07", "3-7", "https://paizo.com/products/btpy9oik?Pathfinder-Society-Scenario-807-From-the-Tome-of-Righteous-Repose"),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("The Arcane Heist", "The Flying Goblin one-shot", "5-7", "https://www.patreon.com/posts/arcane-heist-one-107529871"),
+      pctd(1, "Ardeth the Silent", "Spare", "Golarion/PCs/ardeth.html", null),
+      "<td rowspan='1' class='fill'></td>",
+      pctd(3, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("What Sleeps in Stone", "PSOP #8-13", "7-11", "https://paizo.com/products/btpy9qc8?Pathfinder-Society-Scenario-813-What-Sleeps-in-Stone"),
+      pctd(2, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
+      pctd(2, "Varx", null, "Golarion/PCs/varx.html", null),
+      "</tr>"
+    );
+    document.writeln(
+      "<tr>",
+      adv("Unleashing the Untouchable", "PSOP #8-25", "12-15", "https://paizo.com/products/btpy9tl9?Pathfinder-Society-Scenario-825-Unleashing-the-Untouchable"),
+      "</tr>"
+    );
+  </script>
+</table>
+
+<ul>
+  <li><a name="foot_R">(R) Retired</a></li>
+  <li><a name="foot_1">(1) Killed by fire beetles in <i>Valley of Mist</i> adventure</a></li>
+  <li><a name="foot_2">(2) Killed by bugbears in <i>Valley of the Claw</i> adventure</a></li>
+  <li><a name="foot_3">(3) Killed by giant frogs in <i>The Keep on the Borderlands</i> adventure</a></li>
+  <li><a name="foot_4">(4) Captured and killed by evil cleric in <i>The Village of Hommlet</i> adventure</a></li>
+  <li><a name="foot_5">(5) Killed by clay golem in <i>The Forgotten South</i> adventure</a></li>
+  <li><a name="foot_6">(6) Killed by grey ooze in <i>Towers of Teeth</i> adventure; resurrected</a></li>
+  <li><a name="foot_7">(7) Stoned by medusa in <i>The Ghost Tower of Inverness</i> adventure; resurrected later</a></li>
+  <li><a name="foot_8">(8) Buried in rubble from <i>Fireball</i> blast in <i>The Ghost Tower of Inverness</i> adventure</a></li>
+  <li><a name="foot_9">(9) Killed by stone thrown by fire giant in <i>The Ghost Tower of Inverness</i> adventure</a></li>
+  <li><a name="foot_10">(10) Kicked to death by nightmare in <i>Ilitian</i> adventure</a></li>
+  <li><a name="foot_11">(11) Killed by blast from breaking of <i>Staff of Ancients</i> in <i>Ilitian</i> adventure</a></li>
+  <li><a name="foot_12">(12) Drowned while escaping captivity</a> in <i>Ilitian</i> adventure</li>
+  <li><a name="foot_13">(13) Trapped on ethereal plane when <i>Staff of Ancients</i> broken in <i>Ilitian</i> adventure</a></li>
+  <li><a name="foot_14">(14) Fell to death when Aarakocra mount killed in <i>Ilitian</i> adventure</a></li>
+  <li><a name="foot_15">(15) Killed by evil cleric in the <i>Palace of the Silver Princess</i> adventure</a></li>
+  <li><a name="foot_16">(16) Killed by wolfwere in <i>The Ruin at Eastcreek</i> adventure</a></li>
+  <li><a name="foot_17">(17) Killed by goblins in <i>Secret of the Slavers' Stockade</i> adventure</a></li>
+  <li><a name="foot_18">(18) Killed by <i>Exploding Runes</i> in <i>The Twofold Talisman</i>; resurrected</a></li>
+  <li><a name="foot_19">(19) Died for reasons lost to the mists of time in <i>The Ruins of Andril</i> adventure</a></li>
+  <li><a name="foot_20">(20) Killed by margoyles in <i>The Lost Caverns of Tsojcanth</i>; resurrected</a></li>
+  <li><a name="foot_21">(21) Killed by stone thrown by frost giant in <i>Seeing Both Sides</i> adventure; body lost</a></li>
+  <li><a name="foot_22">(22) Killed by shambling mound in <i>Better Off Dead</i> adventure; reanimated, then resurrected</a></li>
+  <li><a name="foot_23">(23) Killed by trolls in <i>The Wayward Wood</i>adventure; later reconstituted by a <i>Ring of Regeneration</i></a></li>
+  <li><a name="foot_24">(24) Died for reasons lost to the mists of time in <i>The Dream Glen</i> adventure; resurrected</a></li>
+  <li><a name="foot_25">(25) Killed by undead fighter in <i>Mud Sorcerer's Tomb</i> adventure; resurrected</a></li>
+  <li><a name="foot_26">(26) Killed by bombadier beetle in <i>The Case of the Missing Mage</i> adventure</a></li>
+  <li><a name="foot_27">(27) Killed by falling down a shaft in <i>The Valley of the Earth Mother</i> adventure</a></li>
+  <li><a name="foot_28">(28) Died for reasons lost to the mists of time in <i>A Blight on the Land</i> adventure; resurrected</a></li>
+  <li><a name="foot_29">(29) Died for reasons lost to the mists of time in <i>Asflag's Unintentional Emporium</i> adventure; resurrected</a></li>
+  <li><a name="foot_30">(30) Died for reasons lost to the mists of time in <i>Dwellers of the Forbidden City</i> adventure</a></li>
+  <li><a name="foot_31">(31) Killed by harpies in <i>In Wrath's Shadow</i> adventure</a></li>
+  <li><a name="foot_32">(32) Killed by wraith spawan in <i>In Wrath's Shadow</i> adventure; resurrected</a></li>
+  <li><a name="foot_33">(33) Killed by poisonous spider in <i>In the Dread of Night</i> adventure</a></li>
+  <li><a name="foot_34">(34) Did not complete <i>In Wrath's Shadow</i> adventure</a></li>
+  <li><a name="foot_35">(35) Killed by hostile <i>Fireball</i> in <i>My Enemy's Enemy</i> adventure; resurrected</a></li>
+  <li><a name="foot_36">(36) Killed by ray from robots in <i>Returned to Sky</i> adventure; resurrected</a></li>
+  <li><a name="foot_37">(37) Killed by <i>Lightning Bolt</i> from Technic League operative in <i>Return to Sky</i> adventure; resurrected</a></li>
+  <li><a name="foot_38">(38) Killed by aether elementals in <i>Abducted in Aether</i> adventure; resurrected</a></li>
+  <li><a name="foot_39">(39) Killed by bullette in <i>Captives of Toil</i> adventure; revived by Lyli's <i>Breath of Life</i> spell</a></li>
+</ul>
+
+</body>
+
+</html>

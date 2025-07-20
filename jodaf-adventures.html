@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Adventures by Jodaf</title>
+<style>
+  .centered { text-align: center }
+  .digitize { background-color: Yellow }
+  .final { background-color: Green }
+  .final-edit { background-color: GreenYellow }
+  .incomplete { background-color: Yellow }
+  .missing { background-color: Red }
+  .review { background-color: Yellow }
+  table, th, td {
+    border: 1px solid black;
+  }
+</style>
+<script>
+function adventure(title, path, levels, textStatus, mapStatus) {
+  var mapClass = mapStatus.toLowerCase().replaceAll(' ', '-');
+  var textClass = textStatus.toLowerCase().replaceAll(' ', '-');
+  if(path)
+    title = "<a href='" + path + ".html'>" + title + "</a>";
+  var text =
+    "  <tr>" +
+    "<td>" + title + "</td><td>" + levels + "</td>" +
+    "<td class='" + textClass + "'>" + textStatus + "</td>" +
+    "<td class='" + mapClass + "'>" + mapStatus + "</td>" +
+    "</tr>";
+  document.write(
+    text + "\n"
+  );
+}
+</script>
+</head>
+
+<body>
+
+<h1 class="centered">Adventures by Jodaf</h1>
+
+<table>
+  <tr><th>Title</th><th>Levels</th><th>Text Status</th><th>Map Status</th></tr>
+  <script>
+  adventure("Valley of Mist", "Classic/Adventures/valley-of-mist", "1", "Final", "Final");
+  adventure("Valley of the Claw", "Classic/Adventures/valley-of-the-claw", "1-2", "Final", "Final");
+  adventure("Castle Thanil", "Classic/Adventures/castle-thanil", "?", "Digitize", "Digitize");
+  adventure("The Forgotten South", "Classic/Adventures/forgotten-south", "?", "Incomplete", "Digitize");
+  adventure("The Towers of Teeth", "Classic/Adventures/towers-of-teeth", "?", "Digitize", "Digitize");
+  adventure("Palenel Monastery", "Classic/Adventures/palenel-monastery", "2-5", "Final", "Final");
+  adventure("Ilitian", "Classic/Adventures/ilitian", "4-7", "Digitize", "Digitize");
+  adventure("The Ruin at Eastcreek", "Classic/Adventures/ruin-at-eastcreek", "2-5", "Final", "Final");
+  adventure("The Plane of Ghardis", "Classic/Adventures/plane-of-ghardis", "?", "Digitize", "Digitize");
+  adventure("The Search for Kragthorn", "Classic/Adventures/search-for-kragthorn", "?", "Digitize", "Digitize");
+  adventure("Morella's Keep", "Classic/Adventures/morellas-keep", "?", "Digitize", "Digitize");
+  adventure("The Creature of the Caves", "Classic/Adventures/creature-of-the-caves", "?", "Digitize", "Digitize");
+  adventure("The Dream Glen", "Classic/Adventures/dream-glen", "6-8", "Incomplete", "Final");
+  adventure("Special Delivery", "Classic/Adventures/special-delivery", "6-8", "Final", "Final");
+  adventure("Seeing Both Sides", "Classic/Adventures/seeing-both-sides", "6-8", "Digitize", "Digitize");
+  adventure("Better Off Dead", "Classic/Adventures/better-off-dead", "6-8", "Final", "Final");
+  adventure("Peltor's Dig", "Classic/Adventures/peltors-dig", "6-8", "Final", "Final");
+  adventure("The Stars at Night", "BT/Adventures/stars-at-night", "1", "Final", "Final");
+  adventure("The Case of the Missing Mage", "BT/Adventures/case-of-the-missing-mage", '1-2', "Final", "Final");
+  adventure("Shadows Over Swallow's Lake", "BT/Adventures/shadows-over-swallows-lake", '2-4', "Incomplete", "Incomplete");
+  adventure("The Fish Are Biting", "BT/Adventures/fish-are-biting", "2-4", "Final", "Final");
+  adventure("Saving Colonel Carynn", "BT/Adventures/saving-colonel-carynn", "3-5", "Incomplete", "Digitize");
+  adventure("O Come, All Ye Faithful", "BT/Adventures/come-all-ye-faithful", "3-5", "Final", "Final");
+  adventure("A Miner Mishap", "BT/Adventures/miner-mishap", "3-5", "Final", "Final");
+  adventure("A Lucky Break", "BT/Adventures/lucky-break", "3-5", "Final", "Final");
+  adventure("Scrubbing Troubles", "BT/Adventures/scrubbing-troubles", "4-6", "Final edit", "Digitize");
+  adventure("Dark Dawn", "BT/Adventures/dark-dawn", "4-6", "Incomplete", "Digitize");
+  adventure("Strangers in a Very Strange Land", "Midnight/Adventures/strangers-in-a-very-strange-land", "6-8", "Incomplete", "Digitize");
+  adventure("Collectibles", "OldLands/Adventures/collectibles", "3-5", "Final", "Final");
+  adventure("Bookmobile", "Midnight/Adventures/bookmobile", "3-5", "Incomplete", "Incomplete");
+  adventure("It's a Wonderful Last Age", "Midnight/Adventures/its-a-wonderful-last-age", "7-9", "Final", "Final");
+  adventure("Disappearing Trick", "Midnight/Adventures/disappearing-trick", "7-9", "Final edit", "Missing");
+  adventure("Separation Anxiety", null, "6-8", "Incomplete", "Digitize");
+  adventure("A Tale of Two Halflings", "Midnight/Adventures/tale-of-two-halflings", "7-9", "Final", "Final");
+  adventure("Riding Dirty", null, "8?", "Incomplete", "Missing");
+  </script>
+</table>
+
+</body>
+</html>
