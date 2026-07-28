@@ -40,7 +40,7 @@
 function adv(name, ref, levels, url, introUrl) {
   var result = "<th>";
   if(url)
-    result += "<a href='" + url + "'>";
+    result += "<a href='" + url + "'" + (url.startsWith("http") ? " target=_top" : "") + ">";
   result += name;
   if(url)
     result += "</a>";
@@ -228,7 +228,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Into the Forgotten Realms", "Dr95", "5-8", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine095/mode/2up"),
+      adv("Into the Forgotten Realms", "Dr95", "5-8", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine095/page/44/mode/2up"),
       pctd(10, "Maub", null, "Classic/PCs/maub.html", null),
       "</tr>"
     );
@@ -244,7 +244,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Twofold Talisman", "Dr84/85", "5-7", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine084/"),
+      adv("The Twofold Talisman", "Dr84/85", "5-7", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine084/page/44/mode/2up"),
       pctd(1, "Kragthorn", null, "Classic/Bones/kragthorn.html", 18),
       pctd(3, "Linmer", "Rob", "Classic/Bones/linmer.html", 19),
       pctd(3, "Herclin", "Rob", "Classic/Bones/herclin.html", null),
@@ -260,7 +260,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Ruins of Andril", "Dr81", "8-11", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine081/", "Classic/Adventures/ruins-of-andril-intro.html"),
+      adv("The Ruins of Andril", "Dr81", "8-11", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine081/page/42/mode/2up/", "Classic/Adventures/ruins-of-andril-intro.html"),
       "</tr>"
     );
     document.writeln(
@@ -281,13 +281,13 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Hunt in Great Allindel", "Du17", "4-7", "https://archive.org/details/dungeon-magazine-017", "Classic/Adventures/hunt-in-great-allindel-intro.html"),
+      adv("The Hunt in Great Allindel", "Du17", "4-7", "https://archive.org/details/dungeon-magazine-017/page/16/mode/2up", "Classic/Adventures/hunt-in-great-allindel-intro.html"),
       pctd(1, "Kragthorn", null, "Classic/Bones/kragthorn.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Sword of Justice", "Dr92", "1-2", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine092/"),
+      adv("The Sword of Justice", "Dr92", "1-2", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine092/page/46/mode/2up"),
       pctd(7, "Relthior", "Norm", "Classic/PCs/relthior.html", null),
       pctd(7, "Theora", "Norm", "Classic/PCs/theora.html", null),
       pctd(7, "Valorion", "Caroline", "Classic/Bones/valorion.html", "R"),
@@ -299,7 +299,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Citidel by the Sea", "Dr78", "1-3", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine078/"),
+      adv("Citidel by the Sea", "Dr78", "1-3", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine078/page/42/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -339,7 +339,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Valley of the Earth Mother", "Dr102", "4-6", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine102/"),
+      adv("Valley of the Earth Mother", "Dr102", "4-6", "https://archive.org/details/DragonMagazine260_201801/DragonMagazine102/page/44/mode/2up"),
       pctd(1, "Ferocia", "Caroline", "Classic/Bones/ferocia.html", "R"),
       pctd(1, "Grizwaldo", "Rich", "Classic/Bones/grizwaldo.html", "R"),
       pctd(1, "Samet", "Dave", "Classic/Bones/samet.html", "R"),
@@ -349,16 +349,16 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("In the Dread of Night", "Du24", "1-3", "https://archive.org/details/dungeon-magazine-024", "Classic/Adventures/in-the-dread-of-night-intro.html"),
-      pctd(1, "Shazera", "Norm", "Classic/Bones/shazera.html", 33),
-      "<td rowspan='1' class='fill'></td>",
-      "<td rowspan='1' class='fill'></td>",
-      pctd(1, "Fleur", "Caroline", "Classic/Bones/fleur.html", "R"),
-      pctd(1, "Grimla", "Rich", "Classic/Bones/grimla.html", "R"),
-      "<td rowspan='1' class='fill'></td>",
-      pctd(1, "Bismuth", "Dave", "Classic/Bones/bismuth.html", "R"),
-      "<td rowspan='1' class='fill'></td>",
-      pctd(1, "Lefty", "Kristy", "Classic/Bones/lefty.html", "R"),
+      adv("In the Dread of Night", "Du24", "1-3", "https://archive.org/details/dungeon-magazine-024/page/6/mode/2up", "Classic/Adventures/in-the-dread-of-night-intro.html"),
+      pctd(2, "Shazera", "Norm", "Classic/Bones/shazera.html", 33),
+      "<td rowspan='2' class='fill'></td>",
+      "<td rowspan='2' class='fill'></td>",
+      pctd(2, "Fleur", "Caroline", "Classic/Bones/fleur.html", "R"),
+      pctd(2, "Grimla", "Rich", "Classic/Bones/grimla.html", "R"),
+      "<td rowspan='2' class='fill'></td>",
+      pctd(2, "Bismuth", "Dave", "Classic/Bones/bismuth.html", "R"),
+      "<td rowspan='2' class='fill'></td>",
+      pctd(2, "Lefty", "Kristy", "Classic/Bones/lefty.html", "R"),
       "<td rowspan='1' class='fill'></td>",
       pctd(1, "Sarano", "Geoff", "Classic/Bones/sarano.html", "R"),
       pctd(1, "Allagola", "Geoff", "Classic/Bones/allagola.html", "R"),
@@ -368,7 +368,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Nine-Tenths of the Law", "Du26", "7-10", "https://archive.org/details/dungeon-magazine-026", "Classic/Adventures/nine-tenths-of-the-law-intro.html"),
+      adv("Nine-Tenths of the Law", "Du26", "7-10", "https://archive.org/details/dungeon-magazine-026/page/58/mode/2up", "Classic/Adventures/nine-tenths-of-the-law-intro.html"),
       "</tr>"
     );
     document.writeln(
@@ -397,20 +397,20 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("A Blight on the Land", "Du38", "8-12", "https://archive.org/details/dungeon-magazine-038", "Classic/Adventures/blight-on-the-land-intro.html"),
+      adv("A Blight on the Land", "Du38", "8-12", "https://archive.org/details/dungeon-magazine-038/page/4/mode/2up", "Classic/Adventures/blight-on-the-land-intro.html"),
       pctd(20, "Gallomere", null, "Classic/PCs/gallomere.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Wayward Wood", "Du32", "6-9", "https://archive.org/details/dungeon-magazine-032", "Classic/Adventures/wayward-wood-intro.html"),
+      adv("The Wayward Wood", "Du32", "6-9", "https://archive.org/details/dungeon-magazine-032/page/n3/mode/2up", "Classic/Adventures/wayward-wood-intro.html"),
       pctd(19, "Maub", null, "Classic/PCs/maub.html", null),
       pctd(1, "Merydel", null, "Classic/PCs/merydel.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Mud Sorcerer's Tomb", "Du37", "10-14", "https://archive.org/details/dungeon-magazine-037"),
+      adv("The Mud Sorcerer's Tomb", "Du37", "10-14", "https://archive.org/details/dungeon-magazine-037/page/n43/mode/2up"),
       pctd(11, "Relthior", null, "Classic/PCs/relthior.html", 29),
       pctd(18, "Theora", null, "Classic/PCs/theora.html", null),
       "<td rowspan='18' class='fill'></td>",
@@ -419,29 +419,29 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Ghazal", "Du30", "6-8", "https://archive.org/details/dungeon-magazine-030", "Classic/Adventures/ghazal-intro.html"),
+      adv("Ghazal", "Du30", "6-8", "https://archive.org/details/dungeon-magazine-030/page/n17/mode/2up"),
       pctd(17, "Rodnurg", null, "Classic/PCs/rodnurg.html", null),
       pctd(17, "Merydel", null, "Classic/PCs/merydel.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Khamsa's Folly", "Du40", "4-6", "https://archive.org/details/dungeon-magazine-040", "Classic/Adventures/khamsas-folly-intro.html"),
+      adv("Khamsa's Folly", "Du40", "4-6", "https://archive.org/details/dungeon-magazine-040/page/n13/mode/2up", "Classic/Adventures/khamsas-folly-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Pipes of Doom", "Du28", "6-10", "https://archive.org/details/dungeon-magazine-028"),
+      adv("The Pipes of Doom", "Du28", "6-10", "https://archive.org/details/dungeon-magazine-028/page/7/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Ship of the Night", "Du20", "7-9", "https://archive.org/details/dungeon-magazine-020", "Classic/Adventures/ship-of-the-night-intro.html"),
+      adv("The Ship of the Night", "Du20", "7-9", "https://archive.org/details/dungeon-magazine-020/page/5/mode/2up", "Classic/Adventures/ship-of-the-night-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Sleep of Ages", "Du69", "5-8", "https://archive.org/details/dungeon-magazine-069"),
+      adv("Sleep of Ages", "Du69", "5-8", "https://archive.org/details/dungeon-magazine-069/page/n41/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -456,48 +456,48 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("A Hitch in Time", "Du24", "7-10", "https://archive.org/details/dungeon-magazine-024", "Classic/Adventures/hitch-in-time-intro.html"),
+      adv("A Hitch in Time", "Du24", "7-10", "https://archive.org/details/dungeon-magazine-024/page/26/mode/2up", "Classic/Adventures/hitch-in-time-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Tarfil's Tomb", "Du27", "10-14", "https://archive.org/details/dungeon-magazine-027", "Classic/Adventures/tarfils-tomb-intro.html"),
+      adv("Tarfil's Tomb", "Du27", "10-14", "https://archive.org/details/dungeon-magazine-027/page/n9/mode/2up", "Classic/Adventures/tarfils-tomb-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Asflag's Unintentional Emporium", "Du36", "3-7", "https://archive.org/details/dungeon-magazine-036", "Classic/Adventures/asflags-unintentional-emporium-intro.html"),
+      adv("Asflag's Unintentional Emporium", "Du36", "3-7", "https://archive.org/details/dungeon-magazine-036/page/8/mode/2up", "Classic/Adventures/asflags-unintentional-emporium-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Steelheart", "Du53", "7-9", "https://archive.org/details/dungeon-magazine-053", "Classic/Adventures/steelheart-intro.html"),
+      adv("Steelheart", "Du53", "7-9", "https://archive.org/details/dungeon-magazine-053/page/n47/mode/2up", "Classic/Adventures/steelheart-intro.html"),
       pctd(7, "Relthior", null, "Classic/PCs/relthior.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Ailamere's Lair", "Du51", "6-9", "https://archive.org/details/dungeon-magazine-051"),
+      adv("Ailamere's Lair", "Du51", "6-9", "https://archive.org/details/dungeon-magazine-051/page/n17/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Operation Manta Ray", "Du66", "6-9", "https://archive.org/details/dungeon-magazine-066", "Classic/Adventures/operation-manta-ray-intro.html"),
+      adv("Operation Manta Ray", "Du66", "6-9", "https://archive.org/details/dungeon-magazine-066/page/37/mode/2up", "Classic/Adventures/operation-manta-ray-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Stepping Stones", "Du68", "6-8", "https://archive.org/details/dungeon-magazine-068", "Classic/Adventures/stepping-stones-intro.html"),
+      adv("Stepping Stones", "Du68", "6-8", "https://archive.org/details/dungeon-magazine-068/page/55/mode/2up", "Classic/Adventures/stepping-stones-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Twilight's Last Gleaming", "Du35", "8-10", "https://archive.org/details/dungeon-magazine-035", "Classic/Adventures/twilights-last-gleaming-intro.html"),
+      adv("Twilight's Last Gleaming", "Du35", "8-10", "https://archive.org/details/dungeon-magazine-035/page/n5/mode/2up", "Classic/Adventures/twilights-last-gleaming-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("They Also Serve", "Du10", "5-7", "https://archive.org/details/dungeon-magazine-010", "Classic/Adventures/they-also-serve-intro.html"),
+      adv("They Also Serve", "Du10", "5-7", "https://archive.org/details/dungeon-magazine-010/page/12/mode/2up", "Classic/Adventures/they-also-serve-intro.html"),
       "</tr>"
     );
     document.writeln(
@@ -612,12 +612,12 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Sleeper in the Tomb of Dreams", "Du155", "8", "https://archive.org/details/dungeon-magazine-155"),
+      adv("Sleeper in the Tomb of Dreams", "Du155", "8", "https://archive.org/details/dungeon-magazine-155/page/n59/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Last Breaths of Ashenport", "Du156", "8", "https://archive.org/details/dungeon-magazine-156"),
+      adv("The Last Breaths of Ashenport", "Du156", "8", "https://archive.org/details/dungeon-magazine-156/page/70/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -640,7 +640,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Valley of the Snails", "Du87", "1", "https://archive.org/details/dungeon-magazine-087"),
+      adv("Valley of the Snails", "Du87", "1", "https://archive.org/details/dungeon-magazine-087/page/n95/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -672,7 +672,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Ex Keraptis Cum Amore", "Du77", "8-12", "https://archive.org/details/dungeon-magazine-077"),
+      adv("Ex Keraptis Cum Amore", "Du77", "8-12", "https://archive.org/details/dungeon-magazine-077/page/32/mode/2up"),
       pctd(1, "Relthior", null, "Classic/PCs/relthior.html", null),
       pctd(1, "Theora", null, "Classic/PCs/theora.html", null),
       pctd(1, "Maub", null, "Classic/PCs/maub.html", null),
@@ -697,7 +697,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Slave Vats of the Yuan-Ti", "Du69", "3-5", "https://archive.org/details/dungeon-magazine-069", "BT/Adventures/slave-vats-of-the-yuan-ti-intro.html"),
+      adv("Slave Vats of the Yuan-Ti", "Du69", "3-5", "https://archive.org/details/dungeon-magazine-069/page/n1/mode/2up", "BT/Adventures/slave-vats-of-the-yuan-ti-intro.html"),
       pctd(4, "Silv", "Robert", "BT/PCs/silv.html", null),
       "</tr>"
     );
@@ -708,12 +708,12 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Dark Place", "Du49", "5-7", "https://archive.org/details/dungeon-magazine-049", "BT/Adventures/dark-place-intro.html"),
+      adv("The Dark Place", "Du49", "5-7", "https://archive.org/details/dungeon-magazine-049/page/10/mode/2up", "BT/Adventures/dark-place-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Pit", "Du17", "3-5", "https://archive.org/details/dungeon-magazine-017"),
+      adv("The Pit", "Du17", "3-5", "https://archive.org/details/dungeon-magazine-017/page/4/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -736,7 +736,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Hunt for a Hierophant", "Du64", "6-8", "https://archive.org/details/dungeon-magazine-064", "Classic/Adventures/hunt-for-a-hierophant-intro.html"),
+      adv("Hunt for a Hierophant", "Du63", "6-8", "https://archive.org/details/dungeon-magazine-063/page/n1/mode/2up", "Classic/Adventures/hunt-for-a-hierophant-intro.html"),
       pctd(4, "Relthior", null, "Classic/PCs/relthior.html", null),
       pctd(4, "Theora", null, "Classic/PCs/theora.html", null),
       pctd(4, "Maub", null, "Classic/PCs/maub.html", null),
@@ -749,17 +749,17 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Elminster's Back Door", "Du30", "any", "https://archive.org/details/dungeon-magazine-030"),
+      adv("Elminster's Back Door", "Du30", "any", "https://archive.org/details/dungeon-magazine-030/page/15/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Thiondar's Legacy", "Du30", "8-12", "https://archive.org/details/dungeon-magazine-030", "Classic/Adventures/thiondars-legacy-intro.html"),
+      adv("Thiondar's Legacy", "Du30", "8-12", "https://archive.org/details/dungeon-magazine-030/page/n37/mode/2up", "Classic/Adventures/thiondars-legacy-intro.html"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Threshold of Evil", "Du10", "14-18", "https://archive.org/details/dungeon-magazine-010", "Classic/Adventures/threshold-of-evil-intro.html"),
+      adv("Threshold of Evil", "Du10", "14-18", "https://archive.org/details/dungeon-magazine-010/page/42/mode/2up", "Classic/Adventures/threshold-of-evil-intro.html"),
       "</tr>"
     );
     document.writeln(
@@ -777,12 +777,12 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Knowledge Is Power", "GenCon2005", "6", null),
+      adv("Knowledge Is Power", "GenCon2005", "6", "Midnight/Adventures/Knowledge-Is-Power.pdf"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Below Vulture Point", "Du39", "1", "https://archive.org/details/dungeon-magazine-039"),
+      adv("Below Vulture Point", "Du39", "1", "https://archive.org/details/dungeon-magazine-039/page/5/mode/2up"),
       pctd(7, "Philisia", "Norm", "OldLands/PCs/philisia.html", null),
       pctd(7, "Flyn", "Caroline", "OldLands/PCs/flyn.html", null),
       pctd(7, "Porig", "Rich", "OldLands/PCs/porig.html", null),
@@ -794,27 +794,27 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Fountain of Health", "Du39", "1", "https://archive.org/details/dungeon-magazine-039"),
+      adv("The Fountain of Health", "Du39", "1", "https://archive.org/details/dungeon-magazine-039/page/n23/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Isle of the Abbey", "Du34", "1-3", "https://archive.org/details/dungeon-magazine-034"),
+      adv("Isle of the Abbey", "Du34", "1-3", "https://archive.org/details/dungeon-magazine-034/page/26/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Last of the Iron House", "Du39", "2-4", "https://archive.org/details/dungeon-magazine-039"),
+      adv("Last of the Iron House", "Du39", "2-4", "https://archive.org/details/dungeon-magazine-039/page/53/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Cauldron of Plenty", "Du21", "2-4", "https://archive.org/details/dungeon-magazine-021"),
+      adv("The Cauldron of Plenty", "Du21", "2-4", "https://archive.org/details/dungeon-magazine-021/page/4/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Ancient Blood", "Du20", "3-5", "https://archive.org/details/dungeon-magazine-020"),
+      adv("Ancient Blood", "Du20", "3-5", "https://archive.org/details/dungeon-magazine-020/page/n51/mode/2up"),
       pctd(2, "Quilvyn", "Avalon", "OldLands/PCs/quilvyn.html", null),
       "</tr>"
     );
@@ -825,7 +825,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Lady of the Lake", "Du5", "1", "https://archive.org/details/dungeon-magazine-005"),
+      adv("Lady of the Lake", "Du5", "1", "https://archive.org/details/dungeon-magazine-005/page/11/mode/2up"),
       pctd(4, "Erynsial the Austere", "Norm", "OldLands/PCs/erynsial.html", "R"),
       pctd(4, "Rowan", "Caroline", "OldLands/PCs/rowan.html", "R"),
       pctd(4, "Todgnup", "Rich", "OldLands/PCs/todgnup.html", "R"),
@@ -839,17 +839,17 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Trouble With Mylvin Wimbly", "Du5", "1-3", "https://archive.org/details/dungeon-magazine-005"),
+      adv("The Trouble With Mylvin Wimbly", "Du5", "1-3", "https://archive.org/details/dungeon-magazine-005/page/33/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Redcap's Revenge", "Du54", "1-3", "https://archive.org/details/dungeon-magazine-054"),
+      adv("Redcap's Revenge", "Du54", "1-3", "https://archive.org/details/dungeon-magazine-054/page/34/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Inheritance", "Du26", "1-3", "https://archive.org/details/dungeon-magazine-026"),
+      adv("The Inheritance", "Du26", "1-3", "https://archive.org/details/dungeon-magazine-026/page/6/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -868,7 +868,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Dark Conventicle", "Du11", "8-12", "https://archive.org/details/dungeon-magazine-011", 'Midnight/Adventures/dark-conventicle-intro.html'),
+      adv("The Dark Conventicle", "Du11", "8-12", "https://archive.org/details/dungeon-magazine-011/page/4/mode/2up", 'Midnight/Adventures/dark-conventicle-intro.html'),
       "</tr>"
     );
     document.writeln(
@@ -878,7 +878,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Tallow's Deep", "Du18", "4-7", "https://archive.org/details/dungeon-magazine-018"),
+      adv("Tallow's Deep", "Du18", "4-7", "https://archive.org/details/dungeon-magazine-018/page/16/mode/2up"),
       pctd(2, "Philisia", null, "OldLands/PCs/philisia.html", null),
       pctd(2, "Flyn", null, "OldLands/PCs/flyn.html", null),
       pctd(2, "Porig", null, "OldLands/PCs/porig.html", null),
@@ -891,7 +891,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Crypt of Istaris", "Du9", "3-5", "https://archive.org/details/dungeon-magazine-009"),
+      adv("The Crypt of Istaris", "Du9", "3-5", "https://archive.org/details/dungeon-magazine-009/page/n9/mode/2up"),
       "</tr>"
     );
     document.writeln(
@@ -933,7 +933,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Raiders of the Chanth", "Du44", '3-5', "https://archive.org/details/dungeon-magazine-044"),
+      adv("Raiders of the Chanth", "Du44", '3-5', "https://archive.org/details/dungeon-magazine-044/page/35/mode/2up"),
       pctd(4, "Philisia", null, "OldLands/PCs/philisia.html", null),
       pctd(4, "Flyn", null, "OldLands/PCs/flyn.html", null),
       pctd(4, "Porig", null, "OldLands/PCs/porig.html", null),
@@ -945,7 +945,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Nymph's Reward", "Du29", '4-6', "https://archive.org/details/dungeon-magazine-029"),
+      adv("Nymph's Reward", "Du29", '4-6', "https://archive.org/details/dungeon-magazine-029/page/n1/mode/2up"),
       pctd(3, "Jelthus", null, "OldLands/PCs/jelthus.html", null),
       "</tr>"
     );
@@ -956,7 +956,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Dreadful Vestiges", "Du71", '4-7', "https://archive.org/details/dungeon-magazine-071", "OldLands/Adventures/dreadful-vestiges-intro.html"),
+      adv("Dreadful Vestiges", "Du71", '4-7', "https://archive.org/details/dungeon-magazine-071/page/47/mode/2up", "OldLands/Adventures/dreadful-vestiges-intro.html"),
       "</tr>"
     );
     document.writeln(
@@ -979,7 +979,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("In Pursuit of the Slayer", "Du15", '6-9', "https://archive.org/details/dungeon-magazine-015"),
+      adv("In Pursuit of the Slayer", "Du15", '6-9', "https://archive.org/details/dungeon-magazine-015/page/12/mode/2up"),
       pctd(1, "Philisia", null, "OldLands/PCs/philisia.html", null),
       pctd(1, "Flyn", null, "OldLands/PCs/flyn.html", null),
       pctd(1, "Porig", null, "OldLands/PCs/porig.html", null),
@@ -1073,7 +1073,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Shades of Grey", "GenCon2005", null, "https://adventurelookup.com/adventures/shades-of-grey"),
+      adv("Shades of Grey", "GenCon2005", null, "Midnight/Adventures/Shades-of-Grey.pdf"),
       pctd(1, "Tuwin", "Norm", null, null),
       pctd(2, "Keepha Mokay", "Caroline", null, null),
       pctd(2, "Nathys Grenil", "Dave", null, null),
@@ -1084,13 +1084,13 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Signs in Shadow", "GenCon2005", null, "https://adventurelookup.com/adventures/signs-in-shadow"),
+      adv("Signs in Shadow", "GenCon2005", null, "Midnight/Adventures/Signs-in-Shadow.pdf"),
       pctd(1, "Durak Darkwalker", "Norm", null, null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Eye of Murkul", "Du73", "6-8", "https://archive.org/details/dungeon-magazine-073"),
+      adv("Eye of Murkul", "Du73", "6-8", "https://archive.org/details/dungeon-magazine-073/page/22/mode/2up"),
       pctd(5, "Philisia", null, "OldLands/PCs/philisia.html", null),
       pctd(5, "Flyn", null, "OldLands/PCs/flyn.html", null),
       pctd(5, "Porig", null, "OldLands/PCs/porig.html", null),
@@ -1102,17 +1102,17 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Black Heart of Ulom", "Du11", "5-8", "https://archive.org/details/dungeon-magazine-011"),
+      adv("The Black Heart of Ulom", "Du11", "5-8", "https://archive.org/details/dungeon-magazine-011/page/34/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Incident at Strathern Point", "Du21", "8-10", "https://archive.org/details/dungeon-magazine-021"),
+      adv("Incident at Strathern Point", "Du21", "8-10", "https://archive.org/details/dungeon-magazine-021/page/38/mode/2up"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Glass House", "Du15", "4-6", "https://archive.org/details/dungeon-magazine-015"),
+      adv("The Glass House", "Du15", "4-6", "https://archive.org/details/dungeon-magazine-015/page/30/mode/2up"),
       "<td rowspan='1' class='fill'></td>",
       pctd(2, "Valshar", null, "OldLands/PCs/valshar.html", null),
       "</tr>"
@@ -1169,7 +1169,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("In Wrath's Shadow", "PSOP #4-02", "3-7", "https://paizo.com/products/btpy8r0c?Pathfinder-Society-Scenario-4-02-In-Wrath-s-Shadow"),
+      adv("In Wrath's Shadow", "PSOP #4-02", "3-7", "https://store.paizo.com/pathfinder-society-scenario-4-02-in-wrath-s-shadow/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 34),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", 34),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", 32),
@@ -1182,7 +1182,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Night March of Kalkamedes", "PSOP #4-19", "1-5", "https://paizo.com/products/btpy8wdz?Pathfinder-Society-Scenario-4-19-The-Night-March-of-Kalkamedes"),
+      adv("The Night March of Kalkamedes", "PSOP #4-19", "1-5", "https://store.paizo.com/pathfinder-society-scenario-4-19-the-night-march-of-kalkamedes/"),
       pctd(13, "Tilhenger", "Jim", "Golarion/PCs/tilhenger.html", null),
       pctd(13, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(13, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1194,48 +1194,48 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Disappeared", "PSOP #4-11", "1-5", "https://paizo.com/products/btpy8v0h?Pathfinder-Society-Scenario-4-11-The-Disappeared"),
+      adv("The Disappeared", "PSOP #4-11", "1-5", "https://store.paizo.com/pathfinder-society-scenario-4-11-the-disappeared/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("My Enemy's Enemy", "PSOP #4-14", "3-7", "https://paizo.com/products/btpy8v0k?Pathfinder-Society-Scenario-4-14-My-Enemys-Enemy"),
+      adv("My Enemy's Enemy", "PSOP #4-14", "3-7", "https://store.paizo.com/pathfinder-society-scenario-4-14-my-enemy-s-enemy/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Fortress of the Nail", "PSOP #4-13", "5-9", "https://paizo.com/products/btpy8v0j?Pathfinder-Society-Scenario-4-13-Fortress-of-the-Nail"),
+      adv("Fortress of the Nail", "PSOP #4-13", "5-9", "https://store.paizo.com/pathfinder-society-scenario-4-13-fortress-of-the-nail/"),
       pctd(10, "Ningannel", null, "Golarion/PCs/ningannel.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Veteran's Vault", "PSOP #4-18", "1-5", "https://paizo.com/products/btpy8wdy?Pathfinder-Society-Scenario-4-18-The-Veterans-Vault"),
+      adv("The Veteran's Vault", "PSOP #4-18", "1-5", "https://store.paizo.com/pathfinder-society-scenario-4-18-the-veteran-s-vault/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Town of Ironwood Watch", "PSOP #4-17", "5-9", "https://paizo.com/products/btpy8wdx?Pathfinder-Society-Scenario-4-17-Tower-of-the-Ironwood-Watch"),
+      adv("The Town of Ironwood Watch", "PSOP #4-17", "5-9", "https://store.paizo.com/pathfinder-society-scenario-4-17-tower-of-the-ironwood-watch/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Secrets Stones Keep", "PSOP #4-25", "5-9", "https://paizo.com/products/btpy8we5?Pathfinder-Society-Scenario-4-25-Glories-of-the-Past-Part-III-The-Secrets-Stones-Keep"),
+      adv("The Secrets Stones Keep", "PSOP #4-25", "5-9", "https://store.paizo.com/pathfinder-society-scenario-4-25-the-secrets-stones-keep/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Technic Siege", "PSOP #6-03", "5-9", "https://paizo.com/products/btpy97n7?Pathfinder-Society-Scenario-6-03-The-Technic-Siege"),
+      adv("The Technic Siege", "PSOP #6-03", "5-9", "https://store.paizo.com/pathfinder-society-scenario-6-03-the-technic-siege-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Beacon Below", "PSOP #6-04", "7-11", "https://paizo.com/products/btpy9984?Pathfinder-Society-Scenario-6-04-Beacon-Below"),
+      adv("Beacon Below", "PSOP #6-04", "7-11", "https://store.paizo.com/pathfinder-society-scenario-6-04-beacon-below-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Valley of Veiled Flame", "PSOP #6-07", "5-9", "https://paizo.com/products/btpy9987?Pathfinder-Society-Scenario-6-07-Valley-of-Veiled-Flame"),
+      adv("Valley of Veiled Flame", "PSOP #6-07", "5-9", "https://store.paizo.com/pathfinder-society-scenario-6-07-valley-of-veiled-flame-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
@@ -1246,12 +1246,12 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Slave Master's Mirror", "PSOP #6-11", "3-7", "https://paizo.com/products/btpy9a1z?Pathfinder-Society-Scenario-6-11-The-Slave-Masters-Mirror"),
+      adv("The Slave Master's Mirror", "PSOP #6-11", "3-7", "https://store.paizo.com/pathfinder-society-scenario-6-11-the-slave-master-s-mirror-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("The Test of Tar Kuata", "PSOP #6-19", "3-7", "https://paizo.com/products/btpy9ch3?Pathfinder-Society-Scenario-6-19-Test-of-Tar-Kuata"),
+      adv("Test of Tar Kuata", "PSOP #6-19", "3-7", "https://store.paizo.com/pathfinder-society-scenario-6-19-test-of-tar-kuata-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
@@ -1266,7 +1266,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Returned to Sky", "PSOP #6-20", "7-11", "https://paizo.com/products/btpy9ctx?Pathfinder-Society-Scenario-6-20-Returned-to-Sky"),
+      adv("Returned to Sky", "PSOP #6-20", "7-11", "https://store.paizo.com/pathfinder-society-scenario-6-20-returned-to-sky-pfrpg-pdf/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 36),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1288,7 +1288,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Tapestry's Toil", "PSOP #6-21", "5-9", "https://paizo.com/products/btpy9cty"),
+      adv("Tapestry's Toil", "PSOP #6-21", "5-9", "https://store.paizo.com/pathfinder-society-scenario-6-21-tapestry-s-toil-pfrpg-pdf/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1300,7 +1300,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Dead Man's Debt", "PSOP #7-24 [reskinned for Hellfrost]", "Novice", "https://paizo.com/products/btpy9lzz?Pathfinder-Society-Scenario-7-24-Dead-Mans-Debt"),
+      adv("Dead Man's Debt", "PSOP #7-24 [reskinned for Hellfrost]", "Novice", "https://store.paizo.com/pathfinder-society-scenario-7-24-dead-man-s-debt-pfrpg-pdf/"),
       pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
       pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
       pctd(1, "Pimla", null, "Hellfrost/PCs/pimla.html", null),
@@ -1309,7 +1309,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Ancient's Anguish", "PSOP #7-11", "7-11", "https://paizo.com/products/btpy9hgy?Pathfinder-Society-Scenario-7-11-Ancients-Anguish"),
+      adv("Ancient's Anguish", "PSOP #7-11", "7-11", "https://store.paizo.com/pathfinder-society-scenario-7-11-ancients-anguish/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1321,7 +1321,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Perils of the Pirate Pact", "PSOP #17 [reskinned for Hellfrost]", "Novice", "https://paizo.com/products/btpy87or?Pathfinder-Society-Scenario-17-Perils-of-the-Pirate-Pact"),
+      adv("Perils of the Pirate Pact", "PSOP #17 [reskinned for Hellfrost]", "Novice", "https://store.paizo.com/pathfinder-society-scenario-17-perils-of-the-pirate-pact-pdf/"),
       pctd(1, "Jujoro", null, "Hellfrost/PCs/jujoro.html", null),
       pctd(1, "Ninra", null, "Hellfrost/PCs/ninra.html", null),
       "<td rowspan='1' class='fill'></td>",
@@ -1331,7 +1331,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Captive in Crystal", "PSOP #7-13", "5-9", "https://paizo.com/products/btpy9hh0?Pathfinder-Society-Scenario-7-13-Captive-in-Crystal"),
+      adv("Captive in Crystal", "PSOP #7-13", "5-9", "https://store.paizo.com/pathfinder-society-scenario-7-13-captive-in-crystal/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1355,7 +1355,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Thralls of the Shattered God", "PSOP #7-17", "5-9", "https://paizo.com/products/btpy9huy?Pathfinder-Society-Scenario-7-17-Thralls-of-the-Shattered-God"),
+      adv("Thralls of the Shattered God", "PSOP #7-17", "5-9", "https://store.paizo.com/pathfinder-society-scenario-7-17-thralls-of-the-shattered-god-pfrpg-pdf/"),
       pctd(2, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(2, "Lyli", null, "Golarion/PCs/lyli.html", 38),
       pctd(2, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1367,7 +1367,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Abducted in Aether", "PSOP #7-23", "7-11", "https://paizo.com/products/btpy9k96?Pathfinder-Society-Scenario-7-23-Abducted-in-Aether"),
+      adv("Abducted in Aether", "PSOP #7-23", "7-11", "https://store.paizo.com/pathfinder-society-scenario-7-23-abducted-in-aether-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
@@ -1382,7 +1382,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Orders From the Gate", "PSOP #7-25", "5-9", "https://paizo.com/products/btpy9m00?Pathfinder-Society-Scenario-7-25-Orders-from-the-Gate"),
+      adv("Orders From the Gate", "PSOP #7-25", "5-9", "https://store.paizo.com/pathfinder-society-scenario-7-25-orders-from-the-gate-pfrpg-pdf/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1404,7 +1404,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Ward Asunder", "PSOP #8-02", "3-7", "https://paizo.com/products/btpy9mbb?Pathfinder-Society-Scenario-802-Ward-Asunder"),
+      adv("Ward Asunder", "PSOP #8-02", "3-7", "https://store.paizo.com/pathfinder-society-scenario-8-02-ward-asunder-pfrpg-pdf/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       pctd(1, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(1, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1416,7 +1416,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Glass River Rescue", "PSOP #5-01 [reskinned for Symbaroum]", "0", "https://paizo.com/products/btpy8xkf?Pathfinder-Society-Scenario-5-01-The-Glass-River-Rescue"),
+      adv("The Glass River Rescue", "PSOP #5-01 [reskinned for Symbaroum]", "0", "https://store.paizo.com/pathfinder-society-scenario-5-01-the-glass-river-rescue/"),
       pctd(1, "Orlan of the House Daar", null, "Symbaroum/PCs/orlan.html", null),
       pctd(1, "Magdala", null, "Symbaroum/PCs/magdala.html", null),
       "<td rowspan='1' class='fill'></td>",
@@ -1426,7 +1426,7 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("Captives of Toil", "PSOP #8-03", "5-9", "https://paizo.com/products/btpy9mbc?Pathfinder-Society-Scenario-803-Captives-of-Toil"),
+      adv("Captives of Toil", "PSOP #8-03", "5-9", "https://store.paizo.com/pathfinder-society-scenario-8-03-captives-of-toil-pfrpg-pdf/"),
       pctd(1, "Tilhenger", null, "Golarion/PCs/tilhenger.html", 39),
       pctd(10, "Lyli", null, "Golarion/PCs/lyli.html", null),
       pctd(10, "Quain", null, "Golarion/PCs/quain.html", null),
@@ -1438,18 +1438,18 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("The Cindersworn Pact", "PSOP #8-09", "5-9", "https://paizo.com/products/btpy9p8w?Pathfinder-Society-Scenario-809-Forged-in-Flame-Part-1-The-Cindersworn-Pact"),
+      adv("The Cindersworn Pact", "PSOP #8-09", "5-9", "https://store.paizo.com/pathfinder-society-scenario-8-09-forged-in-flame-part-1-the-cindersworn-pact-pfrpg-pdf/"),
       pctd(9, "Tilhenger", null, "Golarion/PCs/tilhenger.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Refugees of the Weary Sky", "PSOP #8-17", "7-11", "https://paizo.com/products/btpy9qcc?Pathfinder-Society-Scenario-817-Refugees-of-the-Weary-Sky"),
+      adv("Refugees of the Weary Sky", "PSOP #8-17", "7-11", "https://store.paizo.com/pathfinder-society-scenario-8-17-refugees-of-the-weary-sky-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("From the Tome of Righteous Repose", "PSOP #8-07", "3-7", "https://paizo.com/products/btpy9oik?Pathfinder-Society-Scenario-807-From-the-Tome-of-Righteous-Repose"),
+      adv("From the Tome of Righteous Repose", "PSOP #8-07", "3-7", "https://store.paizo.com/pathfinder-society-scenario-8-07-from-the-tome-of-righteous-repose-pfrpg-pdf/"),
       "<td rowspan='1' class='fill'></td>",
       "</tr>"
     );
@@ -1463,19 +1463,19 @@ function pctd(rows, name, player, url, foot) {
     );
     document.writeln(
       "<tr>",
-      adv("What Sleeps in Stone", "PSOP #8-13", "7-11", "https://paizo.com/products/btpy9qc8?Pathfinder-Society-Scenario-813-What-Sleeps-in-Stone"),
+      adv("What Sleeps in Stone", "PSOP #8-13", "7-11", "https://store.paizo.com/pathfinder-society-scenario-8-13-what-sleeps-in-stone-pfrpg-pdf/"),
       pctd(5, "Sporkatz", null, "Golarion/PCs/sporkatz.html", null),
       pctd(5, "Varx", null, "Golarion/PCs/varx.html", null),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Unleashing the Untouchable", "PSOP #8-25", "12-15", "https://paizo.com/products/btpy9tl9?Pathfinder-Society-Scenario-825-Unleashing-the-Untouchable"),
+      adv("Unleashing the Untouchable", "PSOP #8-25", "12-15", "https://store.paizo.com/pathfinder-society-scenario-8-25-unleashing-the-untouchable-pfrpg-pdf/"),
       "</tr>"
     );
     document.writeln(
       "<tr>",
-      adv("Salvation of the Sages", "PSOP #9-07", "7-11", "https://paizo.com/products/btpy9wer?Pathfinder-Society-Scenario-907-Salvation-of-the-Sages"),
+      adv("Salvation of the Sages", "PSOP #9-07", "7-11", "https://store.paizo.com/pathfinder-society-scenario-9-07-salvation-of-the-sages-pdf/"),
       "</tr>"
     );
     document.writeln(
