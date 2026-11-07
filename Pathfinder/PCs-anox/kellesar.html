@@ -212,6 +212,7 @@ var attributes = {
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Spell Slots</b>: O0: 9; O1: 7; O2: 7; O3: 7; O4: 6; O5: 5; O6: 3</td>
+        <td><b>Spell Points</b>: 109</td>
         <td><b>Spell DC</b>: O: 13; Water Form: 13; Water Sight: 13</td>
       </tr></table>
 </td>
@@ -220,33 +221,33 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:<br/>    <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Bane (O1 Ench): Foes within 50' suffer -1 attacks and fear saves (<b>save Will</b> DC 14 negates) for 12 min</td>
+      <td>Bane (O1 Ench): Inflicts -1 attacks and fear saves on foes within 50' (<b>save Will</b> DC 14 negates) for 12 min</td>
     </tr><tr style="text-align:left">
       <td>Bestow Curse (O3 Necr): Touched permanently suffers a choice of -6 to an ability, -4 attacks, saves, and checks, or a 50% chance of losing its action each rd (<b>save Will</b> DC 16 negates)</td>
     </tr><tr style="text-align:left">
       <td>Color Spray (O1 Illu): 15' cone inflicts a sequence of effects (<b>save Will</b> DC 14 negates): unconscious (living creatures only), blinded, and stunned for 2d4 rd on creatures with up to 2 HD; blinded and stunned for 1d4 rd on creatures with up to 4 HD; stunned for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Create Water (O0 Conj): R55' Creates 24 gallons of pure water</td>
+      <td>Create Water (O0 Conj): R55' Creates 24 gallons of pure water; any that remains after 24 hr disappears</td>
     </tr><tr style="text-align:left">
-      <td>Cure Critical Wounds (O4 Conj): Touched regains 4d8+12 hit points; undead instead suffer the same amount (<b>save Will</b> DC 17 half)</td>
+      <td>Cure Critical Wounds (O4 Conj): Touched regains 4d8+12 hit points (<b>save Will</b> DC 17 negates); undead instead suffer the same amount (<b>save Will</b> DC 17 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Light Wounds (O1 Conj): Touched regains 1d8+5 hit points; undead instead suffer the same amount (<b>save Will</b> DC 14 half)</td>
+      <td>Cure Light Wounds (O1 Conj): Touched regains 1d8+5 hit points (<b>save Will</b> DC 14 negates); undead instead suffer the same amount (<b>save Will</b> DC 14 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Moderate Wounds (O2 Conj): Touched regains 2d8+10 hit points; undead instead suffer the same amount (<b>save Will</b> DC 15 half)</td>
+      <td>Cure Moderate Wounds (O2 Conj): Touched regains 2d8+10 hit points (<b>save Will</b> DC 15 negates); undead instead suffer the same amount (<b>save Will</b> DC 15 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Serious Wounds (O3 Conj): Touched regains 3d8+12 hit points; undead instead suffer the same amount (<b>save Will</b> DC 16 half)</td>
+      <td>Cure Serious Wounds (O3 Conj): Touched regains 3d8+12 hit points (<b>save Will</b> DC 16 negates); undead instead suffer the same amount (<b>save Will</b> DC 16 half)</td>
     </tr><tr style="text-align:left">
-      <td>Detect Magic (O0 Divi): 60' cone reveals the presence, power, and schools of magical auras for concentration up to 12 min</td>
+      <td>Detect Magic (O0 Divi): 60' cone reveals the presence and power of magical auras and allows making Knowledge (Arcana) checks to determine their schools for concentration up to 12 min</td>
     </tr><tr style="text-align:left">
       <td>Detect Poison (O0 Divi): R55' Reveals the presence of poison in the target; a successful DC 20 Wisdom or Craft (Alchemy) check reveals the type</td>
     </tr><tr style="text-align:left">
       <td>Eagle's Splendor (O2 Tran): Gives touched +4 Charisma (<b>save Will</b> DC 15 negates) for 12 min</td>
     </tr><tr style="text-align:left">
-      <td>Elemental Body I (Water Form4 Tran): Self becomes a Small elemental for 12 min—a choice of air (gives +2 Dexterity, a +2 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +2 Strength, a +4 natural armor bonus to Armor Class, and the ability to earth glide), fire (gives +2 Dexterity, a +2 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the ability to burn), or water (gives +2 Constitution, a +4 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision</td>
+      <td>Elemental Body I (Water Form4 Tran): Transforms self into a Small elemental for 12 min—a choice of air (gives +2 Dexterity, a +2 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +2 Strength, a +4 natural armor bonus to Armor Class, and the earth glide ability), fire (gives +2 Dexterity, a +2 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the burn ability), or water (gives +2 Constitution, a +4 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision</td>
     </tr><tr style="text-align:left">
-      <td>Elemental Body II (Water Form5 Tran): Self becomes a Medium elemental for 12 min—a choice of air (gives +4 Dexterity, a +3 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +4 Strength, a +5 natural armor bonus to Armor Class, and the ability to earth glide), fire (gives +4 Dexterity, a +3 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the ability to burn), or water (gives +4 Constitution, a +5 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision</td>
+      <td>Elemental Body II (Water Form5 Tran): Transforms self into a Medium elemental for 12 min—a choice of air (gives +4 Dexterity, a +3 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +4 Strength, a +5 natural armor bonus to Armor Class, and the earth glide ability), fire (gives +4 Dexterity, a +3 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the burn ability), or water (gives +4 Constitution, a +5 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision</td>
     </tr><tr style="text-align:left">
-      <td>Elemental Body III (Water Form6 Tran): Self becomes a Large elemental for 12 min—a choice of air (gives +2 Strength; +4 Dexterity, a +4 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +6 Strength, -2 Dexterity, +2 Constitution, a +6 natural armor bonus to Armor Class, and the ability to earth glide), fire (gives +4 Dexterity, +2 Constitution, a +4 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the ability to burn), or water (gives +2 Strength, -2 Dexterity, +6 Constitution, a +6 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision and immunity to bleed damage, critical hits, and Sneak Attack</td>
+      <td>Elemental Body III (Water Form6 Tran): Transforms self into a Large elemental for 12 min—a choice of air (gives +2 Strength; +4 Dexterity, a +4 natural armor bonus to Armor Class, a 60' fly Speed, and the ability to create a whirlwind), earth (gives +6 Strength, -2 Dexterity, +2 Constitution, a +6 natural armor bonus to Armor Class, and the earth glide ability), fire (gives +4 Dexterity, +2 Constitution, a +4 natural armor bonus to Armor Class, resistance 20 to fire, vulnerability to cold, and the burn ability), or water (gives +2 Strength, -2 Dexterity, +6 Constitution, a +6 natural armor bonus to Armor Class, a 60' swim Speed, the ability to create a vortex, and the ability to breathe water); all forms also give 60' Darkvision and immunity to bleed damage, critical hits, and Sneak Attack</td>
     </tr><tr style="text-align:left">
       <td>Entropic Shield (O1 Abju): Causes ranged attacks on self to suffer a 20% miss chance for 12 min</td>
     </tr><tr style="text-align:left">
@@ -264,11 +265,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Hypnotic Pattern (O2 Illu): R220' Fascinates 2d4+10 HD of creatures in a 10' radius (<b>save Will</b> DC 15 negates), working upward from those with the fewest HD, for concentration + 2 rd</td>
     </tr><tr style="text-align:left">
-      <td>Identify (O1 Divi): R60' Cone reveals info on magical auras and gives +10 Spellcraft to determine non-artifact magic item properties, for 36 rd</td>
+      <td>Identify (O1 Divi): 60' cone reveals the presence and power of magical auras, allows making Knowledge (Arcana) checks to determine their schools, and gives +10 Spellcraft checks to determine non-artifact magic item properties, for 36 rd</td>
     </tr><tr style="text-align:left">
       <td>Levitate (O2 Tran): R55' Allows using a move action each rd to raise or lower an unattended object or willing creature 20' each rd for 12 min</td>
     </tr><tr style="text-align:left">
-      <td>Light (O0 Evoc): Touched gives 20' normal light for 120 min</td>
+      <td>Light (O0 Evoc): Touched object emits a 20' normal light for 120 min</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (O0 Tran): R55' Allows self to use move actions to move an unattended object weighing up to 5 lb 15' per rd for concentration</td>
     </tr><tr style="text-align:left">
@@ -300,13 +301,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Spiritual Ally (O4 Evoc): R220' Force being can be moved 30' per rd as a swift action and makes +10, +5 attacks that inflict 1d10+4 HP for 12 rd; the first attack on a target is subject to SR, and failure to overcome it ends the spell</td>
     </tr><tr style="text-align:left">
-      <td>Spiritual Weapon (O2 Evoc): R220' Creates a force weapon (+10 attacks; inflicts 1d8+4 HP force; critical hits as the corresponding physical weapon) that attacks a designated foe for 12 rd; can use move actions to redirect to different targets; the first attack on each creature is subject to SR, and the spell ends if the attack fails to overcome it</td>
+      <td>Spiritual Weapon (O2 Evoc): R220' Creates a force weapon that attacks a designated foe (+10 attacks as a spell inflict 1d8+4 HP force and crit as the corresponding physical weapon) for 12 rd; can be redirected between targets as a move action; the first attack on each creature is subject to SR that ends the spell if the attack fails to overcome it, and the weapon makes 2 attacks with the normal penalties on each subsequent rd</td>
     </tr><tr style="text-align:left">
       <td>Stabilize (O0 Conj): R55' Stabilizes a target with negative hit points (<b>save Will</b> DC 13 negates)</td>
     </tr><tr style="text-align:left">
       <td>Stone Call (O2 Conj): R220' 40' radius inflicts 2d6 HP bludgeoning for 1 rd, then difficult terrain for 11 rd</td>
     </tr><tr style="text-align:left">
-      <td>Telekinesis (O5 Tran): R880' Allows self to move an object or creature weighing up to 300 lb 20' per rd for concentration up to 12 rd (<b>save Will</b> DC 18 negates), to perform a +12 Bull Rush, Disarm, Grapple, or Trip using Charisma instead of Strength or Dexterity once per rd for concentration up to 12 rd, or to hurl 12 objects or creatures in a 5' radius weighing up to 300 lbs total up to 10' (<b>save Will</b> DC 18 negates)</td>
+      <td>Telekinesis (O5 Tran): R880' Allows self to move an object or creature weighing up to 300 lb 20' per rd for concentration up to 12 rd (<b>save Will</b> DC 18 negates), to perform a +15 Bull Rush, Disarm, Grapple, or Trip once per rd for concentration up to 12 rd, or to hurl up to 10' 12 objects or creatures in a 5' radius weighing up to 300 lbs total (<b>save Will</b> DC 18 negates)</td>
     </tr><tr style="text-align:left">
       <td>Touch Of The Sea (O1 Tran): Touched gains +30 swim Speed and +8 Swim, plus the ability to take 10 when distracted and run while swimming, (<b>save Fortitude</b> DC 14 negates) for 12 min</td>
     </tr><tr style="text-align:left">

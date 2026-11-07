@@ -262,6 +262,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Spells Known/Prepared</b>: B0: 6; B1: 6; B2: 5; B3: 5; B4: 4; B5: 2</td>
         <td><b>Spell Slots</b>: B0: 6; B1: 7; B2: 7; B3: 5; B4: 4; B5: 2</td>
+        <td><b>Spell Points</b>: 62</td>
         <td><b>Spell DC</b>: B: 16; Soothing Performance: 16; Suggestion: 16</td>
       </tr></table>
 </td>
@@ -272,21 +273,21 @@ var attributes = {
     <tr style="text-align:left">
       <td>Cause Fear (B1 Necr): R55' Causes a target with up to 5 HD to become frightened and flee for 1d4 rd (<b>save Will</b> DC 17 inflicts shaken for 1 rd)</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (B1 Ench): R55' Target humanoid treats self as a trusted friend (<b>save Will</b> DC 17 negates; +5 if being threatened) for 13 hr</td>
+      <td>Charm Person (B1 Ench): R55' Causes the target humanoid to treat self as a trusted friend (<b>save Will</b> DC 17 negates; +5 if being threatened) for 13 hr</td>
     </tr><tr style="text-align:left">
       <td>Comprehend Languages (B1 Divi): Allows self to understand written text and words spoken in any language for 130 min</td>
     </tr><tr style="text-align:left">
       <td>Crushing Despair (B3 Ench): 30' cone inflicts -2 attacks, damage, saves, and checks (<b>save Will</b> DC 19 negates) for 13 min</td>
     </tr><tr style="text-align:left">
-      <td>Cure Critical Wounds (B4 Conj): Touched regains 4d8+13 hit points; undead instead suffer the same amount (<b>save Will</b> DC 20 half)</td>
+      <td>Cure Critical Wounds (B4 Conj): Touched regains 4d8+13 hit points (<b>save Will</b> DC 20 negates); undead instead suffer the same amount (<b>save Will</b> DC 20 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Light Wounds (B1 Conj): Touched regains 1d8+5 hit points; undead instead suffer the same amount (<b>save Will</b> DC 17 half)</td>
+      <td>Cure Light Wounds (B1 Conj): Touched regains 1d8+5 hit points (<b>save Will</b> DC 17 negates); undead instead suffer the same amount (<b>save Will</b> DC 17 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Moderate Wounds (B2 Conj): Touched regains 2d8+10 hit points; undead instead suffer the same amount (<b>save Will</b> DC 18 half)</td>
+      <td>Cure Moderate Wounds (B2 Conj): Touched regains 2d8+10 hit points (<b>save Will</b> DC 18 negates); undead instead suffer the same amount (<b>save Will</b> DC 18 half)</td>
     </tr><tr style="text-align:left">
       <td>Dancing Lights (B0 Evoc): R230' Creates a humanoid-shaped light, 4 torch lights, or 4 glowing spheres in a 10' radius that can be moved 100' each rd for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Deep Slumber (B3 Ench): R55' 10 HD of creatures in a 10' radius fall asleep (<b>save Will</b> DC 19 negates), moving upward from those with the lowest HD, for 13 min; shaking or wounding wakens an affected creature, but noise does not</td>
+      <td>Deep Slumber (B3 Ench): R55' Puts 10 HD of living creatures in a 10' radius to sleep (<b>save Will</b> DC 19 negates), moving upward from those with the lowest HD, for 13 min; shaking or wounding wakens an affected creature, but noise does not</td>
     </tr><tr style="text-align:left">
       <td>Detect Thoughts (B2 Divi): 60' cone reveals the presence of minds and their surface thoughts (<b>save Will</b> DC 18 presence only) for concentration up to 13 min</td>
     </tr><tr style="text-align:left">
@@ -298,31 +299,31 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Grease (B1 Conj): R55' Coats a 10' square with grease, inflicting falls (<b>save Reflex</b> negates and allows a DC 10 Acrobatics check to move at half Speed), or coats a target object with grease (<b>save Reflex</b> DC 17 negates for possessed items), causing them to be dropped (<b>save Reflex</b> DC 17 negates each rd), for 13 min</td>
     </tr><tr style="text-align:left">
-      <td>Greater Invisibility (B4 Illu): Touched becomes invisible (<b>save Will</b> DC 20 negates), gaining +20 Stealth when moving and +40 when still, for 13 rd</td>
+      <td>Greater Invisibility (B4 Illu): Makes touched invisible (<b>save Will</b> DC 20 negates), giving +20 Stealth when moving and +40 when still, for 13 rd</td>
     </tr><tr style="text-align:left">
       <td>Haste (B3 Tran): R55' 13 targets in a 15' radius gain an extra attack at full BAB during a full-attack action, +1 attacks, a +1 dodge bonus to Armor Class, +1 Reflex saves, and +30 Speed (<b>save Fortitude</b> DC 19 negates) for 13 rd</td>
     </tr><tr style="text-align:left">
-      <td>Hideous Laughter (B1 Ench): R55' Target falls into uncontrollable laughter (<b>save Will</b> DC 17 on the first or second rd negates, creatures of a different type than the caster gain +4) for 13 rd</td>
+      <td>Hideous Laughter (B1 Ench): R55' Causes a target with an Intelligence of at least 3 to fall into uncontrollable laughter (<b>save Will</b> DC 17 on the first or second rd negates, creatures of a different type than the caster have +4 on the saves) for 13 rd</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (B4 Ench): R230' Paralyzes the target (<b>save Will</b> DC 20 negates; additional saves each rd end) for 13 rd</td>
+      <td>Hold Monster (B4 Ench): R230' Paralyzes the target creature (<b>save Will</b> DC 20 negates; additional saves each rd end) for 13 rd</td>
     </tr><tr style="text-align:left">
-      <td>Invisibility Sphere (B3 Illu): Creatures within 10' of touched become invisible (<b>save Will</b> DC 19 negates), gaining +20 Stealth when moving and +40 when still, for 13 min; attacking or moving more than 10' from the target ends the spell for that creature, and the target attacking ends the spell for all</td>
+      <td>Invisibility Sphere (B3 Illu): Makes creatures within 10' of touched invisible to others (<b>save Will</b> DC 19 negates), giving +20 Stealth when moving and +40 when still, for 13 min; attacking or moving more than 10' from the target ends the spell for that creature, and the target attacking ends the spell for all</td>
     </tr><tr style="text-align:left">
-      <td>Lullaby (B0 Ench): R230' Creatures in a 10' radius suffer -5 Perception and -2 Will vs. sleep (<b>save Will</b> DC 16 negates) for concentration + 13 rd</td>
+      <td>Lullaby (B0 Ench): R230' 10' radius inflicts -5 Perception and -2 Will vs. sleep (<b>save Will</b> DC 16 negates) for concentration + 13 rd</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (B0 Tran): R55' Allows self to use move actions to move an unattended object weighing up to 5 lb 15' per rd for concentration</td>
     </tr><tr style="text-align:left">
       <td>Major Image (B3 Illu): R920' Creates a 170 cubic foot movable image with sound, smell, and thermal effects (<b>save Will</b> DC 19 upon interaction disbelieves) for concentration + 3 rd</td>
     </tr><tr style="text-align:left">
-      <td>Mass Cure Serious Wounds (Soothing Performance8 Conj): R55' 13 targets in a 15' radius regain 3d8+13 hit points; undead instead suffer the same amount (<b>save Will</b> DC 24 half)</td>
+      <td>Mass Cure Serious Wounds (Soothing Performance8 Conj): R55' 13 targets in a 15' radius regain 3d8+13 hit points (<b>save Will</b> DC 24 negates); undead instead suffer the same amount (<b>save Will</b> DC 24 half)</td>
     </tr><tr style="text-align:left">
-      <td>Mislead (B5 Illu): R55' Makes self invisible for 13 rd and creates a false double (<b>save Will</b> DC 21 upon interaction disbelieves) for concentration + 3 rd</td>
+      <td>Mislead (B5 Illu): R55' Makes self invisible for 13 rd and creates an illusory double (<b>save Will</b> DC 21 upon interaction disbelieves) for concentration + 3 rd</td>
     </tr><tr style="text-align:left">
-      <td>Read Magic (B0 Divi): Allows self to read magical writing and identify <i>Glyphs</i> and <i>Symbols</i> with a successful Spellcraft check for 130 min</td>
+      <td>Read Magic (B0 Divi): Allows self to read magical writing and identify <i>Glyphs</i> and <i>Symbols</i> with a successful DC 10 + spell level Spellcraft check for 130 min</td>
     </tr><tr style="text-align:left">
       <td>Resistance (B0 Abju): Gives touched +1 saves (<b>save Will</b> DC 16 negates) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Shout (B4 Evoc): 30' cone inflicts 5d6 HP sonic (or 15d6 HP sonic to crystalline creatures and objects) and deafened for 2d6 rd (<b>save Fortitude</b> DC 20 half HP only; save Reflex negates damage to held objects)</td>
+      <td>Shout (B4 Evoc): 30' cone inflicts 5d6 HP sonic (or 13d6 HP sonic to crystalline creatures and objects) and deafened for 2d6 rd (<b>save Fortitude</b> DC 20 half HP only; save Reflex negates damage to held objects)</td>
     </tr><tr style="text-align:left">
       <td>Song Of Discord (B5 Ench): R230' Causes creatures in a 20' radius to have a 50% chance each rd of attacking the nearest creature (<b>save Will</b> DC 21 negates) for 13 rd</td>
     </tr><tr style="text-align:left">
@@ -332,15 +333,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Summon Instrument (B0 Conj): Summons a specified musical instrument, small enough to be held and playable only by self, for 13 min</td>
     </tr><tr style="text-align:left">
-      <td>Tongues (B2 Divi): Allows touched to communicate in any language (<b>save Will</b> DC 18 negates) for 130 min</td>
+      <td>Tongues (B2 Divi): Allows touched to speak and understand any language (<b>save Will</b> DC 18 negates) for 130 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Potions/Oils</b>:<br/>    <table id="Potions" style="width:100%">
     <tr style="text-align:left">
-      <td>Cure Light Wounds Potion (C1 Conj): (5) Touched regains 1d8+1 hit points; undead instead suffer the same amount (<b>save Will</b> DC 11 half)</td>
+      <td>Cure Light Wounds Potion (C1 Conj): (5) Touched regains 1d8+1 hit points (<b>save Will</b> DC 11 negates); undead instead suffer the same amount (<b>save Will</b> DC 11 half)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Moderate Wounds Potion (C2 Conj): Touched regains 2d8+3 hit points; undead instead suffer the same amount (<b>save Will</b> DC 13 half)</td>
+      <td>Cure Moderate Wounds Potion (C2 Conj): Touched regains 2d8+3 hit points (<b>save Will</b> DC 13 negates); undead instead suffer the same amount (<b>save Will</b> DC 13 half)</td>
     </tr><tr style="text-align:left">
       <td>Darkvision Potion (W2 Tran): (2) Gives touched 60' black and white vision in total darkness (<b>save Will</b> DC 13 negates) for 3 hr</td>
     </tr><tr style="text-align:left">
@@ -350,13 +351,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Invisibility Personal Potion (B2 Illu): 1</td>
     </tr><tr style="text-align:left">
-      <td>Jump Potion (W1 Tran): (2) Touched gains +10 Acrobatics to jump (<b>save Will</b> DC 11 negates) for 1 min</td>
+      <td>Jump Potion (W1 Tran): (2) Gives touched +10 Acrobatics to jumps (<b>save Will</b> DC 11 negates) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mage Armor Potion (W1 Conj): (3) Gives touched a +4 armor bonus (<b>save Will</b> DC 11 negates) for 1 hr</td>
+      <td>Mage Armor Potion (W1 Conj): (3) Gives touched a +4 armor bonus to Armor Class (<b>save Will</b> DC 11 negates) for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Message Personal Potion (B0 Tran): 2</td>
     </tr><tr style="text-align:left">
-      <td>Pass Without Trace Potion (D1 Tran): Touched leaves no tracks or scent (<b>save Will</b> DC 11 negates) for 1 hr</td>
+      <td>Pass Without Trace Potion (D1 Tran): Causes touched to leave no tracks or scent (<b>save Will</b> DC 11 negates) for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Protection From Evil Potion (C1 Abju): Wards the touched creature from attacks from evil creatures, mental control, and summoned creatures (<b>save Will</b> DC 11 negates): gives a +2 deflection bonus to Armor Class and +2 saves vs. evil creatures, an additional +2 save to suppress existing mental control and possession by evil creatures and objects, and immunity to new attempts to control or possess by evil creatures and objects, as well as barring contact by evil summoned creatures, for 1 min</td>
     </tr><tr style="text-align:left">
@@ -374,7 +375,7 @@ var attributes = {
     <tr style="text-align:left">
       <td>Detect Undead (C1 Divi): (2) 60' cone reveals undead and their strengths for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Endure Elements (W1 Abju): (2) Touched remains comfortable between -50F and 140F (<b>save Will</b> DC 11 negates) for 24 hr</td>
+      <td>Endure Elements (W1 Abju): (2) Allows touched to remain comfortable between -50F and 140F (<b>save Will</b> DC 11 negates) for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Grease (B1 Conj): (3) R25' Coats a 10' square with grease, inflicting falls (<b>save Reflex</b> negates and allows a DC 10 Acrobatics check to move at half Speed), or coats a target object with grease (<b>save Reflex</b> DC 11 negates for possessed items), causing them to be dropped (<b>save Reflex</b> DC 11 negates each rd), for 1 min</td>
     </tr><tr style="text-align:left">
@@ -382,9 +383,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magic Missile (W1 Evoc): (4) R110' Missile inflicts 1d4+1 HP force</td>
     </tr><tr style="text-align:left">
-      <td>Shout (B4 Evoc): 30' cone inflicts 5d6 HP sonic (or 15d6 HP sonic to crystalline creatures and objects) and deafened for 2d6 rd (<b>save Fortitude</b> DC 16 half HP only; save Reflex negates damage to held objects)</td>
+      <td>Shout (B4 Evoc): 30' cone inflicts 5d6 HP sonic (or 10d6 HP sonic to crystalline creatures and objects) and deafened for 2d6 rd (<b>save Fortitude</b> DC 16 half HP only; save Reflex negates damage to held objects)</td>
     </tr><tr style="text-align:left">
-      <td>Tongues (B2 Divi): (2) Allows touched to communicate in any language (<b>save Will</b> DC 13 negates) for 40 min</td>
+      <td>Tongues (B2 Divi): (2) Allows touched to speak and understand any language (<b>save Will</b> DC 13 negates) for 40 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
